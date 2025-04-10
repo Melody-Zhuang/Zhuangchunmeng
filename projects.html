@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目展示 - 数据分析师/业务运营</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">我的个人网站</div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="resume.html">简历</a></li>
+                <li><a href="skills.html">个人优势</a></li>
+                <li><a href="projects.html" class="active">项目展示</a></li>
+                <li><a href="honors.html">个人荣誉</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="data-analysis" class="project-section">
+            <h1>数据分析项目展示</h1>
+            
+            <!-- 项目1 -->
+            <article class="project-card">
+                <div class="project-header" onclick="toggleProject(this)">
+                    <h2>电商用户行为分析</h2>
+                    <div class="project-summary">
+                        <span class="project-period">2023.9 - 2023.12</span>
+                        <span class="project-tags">
+                            <span class="tag">数据分析</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Power BI</span>
+                        </span>
+                    </div>
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </div>
+                
+                <div class="project-content collapsed">
+                    <section class="project-intro">
+                        <h3>项目介绍</h3>
+                        <p>本项目分析了某电商平台用户的行为数据，通过数据挖掘和可视化，发现用户购买行为特征，为精准营销提供数据支持。</p>
+                    </section>
+
+                    <section class="dataset-info">
+                        <h3>数据集说明</h3>
+                        <ul>
+                            <li>数据来源：电商平台用户行为日志</li>
+                            <li>时间范围：2023年1月-12月</li>
+                            <li>数据量：100万条用户行为记录</li>
+                            <li>主要字段：用户ID、行为类型、商品类别、时间戳等</li>
+                        </ul>
+                    </section>
+
+                    <section class="analysis-framework">
+                        <h3>分析框架</h3>
+                        <div class="mindmap">
+                            <img src="images/ecommerce-mindmap.png" alt="电商分析思维导图">
+                        </div>
+                    </section>
+
+                    <section class="code-samples">
+                        <h3>代码示例</h3>
+                        <div class="code-block">
+                            <h4>SQL分析示例</h4>
+                            <pre><code>
+-- 用户购买行为分析
+SELECT 
+    user_id,
+    COUNT(DISTINCT order_id) as order_count,
+    SUM(amount) as total_amount,
+    AVG(amount) as avg_amount
+FROM user_orders
+GROUP BY user_id
+HAVING COUNT(DISTINCT order_id) > 5
+ORDER BY total_amount DESC;
+                            </code></pre>
+                        </div>
+
+                        <div class="code-block">
+                            <h4>Python分析示例</h4>
+                            <pre><code>
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# 读取数据
+df = pd.read_csv('user_behavior.csv')
+
+# 用户行为分析
+behavior_analysis = df.groupby('behavior_type').size()
+plt.figure(figsize=(10, 6))
+behavior_analysis.plot(kind='bar')
+plt.title('用户行为分布')
+plt.show()
+                            </code></pre>
+                        </div>
+                    </section>
+
+                    <section class="visualization">
+                        <h3>数据可视化</h3>
+                        <div class="powerbi-embed">
+                            <iframe src="powerbi-report-url" width="100%" height="600px" frameborder="0"></iframe>
+                        </div>
+                    </section>
+                </div>
+            </article>
+
+            <!-- 项目2 -->
+            <article class="project-card">
+                <div class="project-header" onclick="toggleProject(this)">
+                    <h2>业务运营数据分析平台</h2>
+                    <div class="project-summary">
+                        <span class="project-period">2023.6 - 2023.8</span>
+                        <span class="project-tags">
+                            <span class="tag">数据平台</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">Tableau</span>
+                        </span>
+                    </div>
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </div>
+                
+                <div class="project-content collapsed">
+                    <section class="project-intro">
+                        <h3>项目介绍</h3>
+                        <p>设计并实现了一个业务运营数据分析平台，整合多个数据源，提供实时数据监控和分析功能。</p>
+                    </section>
+
+                    <section class="dataset-info">
+                        <h3>数据架构</h3>
+                        <ul>
+                            <li>数据源：MySQL、MongoDB、日志文件</li>
+                            <li>更新频率：每小时</li>
+                            <li>数据规模：日均100GB</li>
+                            <li>主要维度：用户、产品、渠道、时间</li>
+                        </ul>
+                    </section>
+
+                    <section class="analysis-framework">
+                        <h3>系统架构</h3>
+                        <div class="mindmap">
+                            <img src="images/platform-architecture.png" alt="平台架构图">
+                        </div>
+                    </section>
+
+                    <section class="visualization">
+                        <h3>平台展示</h3>
+                        <div class="powerbi-embed">
+                            <iframe src="tableau-dashboard-url" width="100%" height="600px" frameborder="0"></iframe>
+                        </div>
+                    </section>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 个人网站. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
