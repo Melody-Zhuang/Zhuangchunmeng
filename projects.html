@@ -16,9 +16,9 @@
             <ul class="nav-links">
                 <li><a href="index.html">首页</a></li>
                 <li><a href="resume.html">简历</a></li>
-                <li><a href="skills.html">个人优势</a></li>
                 <li><a href="projects.html" class="active">项目展示</a></li>
                 <li><a href="honors.html">个人荣誉</a></li>
+                <li><a href="skills.html">个人优势</a></li>
             </ul>
         </nav>
     </header>
@@ -157,6 +157,388 @@ plt.show()
                     </section>
                 </div>
             </article>
+
+            <!-- 项目3 -->
+            <article class="project-card">
+                <div class="project-header" onclick="toggleProject(this)">
+                    <h2>用户画像与精准营销系统</h2>
+                    <div class="project-summary">
+                        <span class="project-period">2023.3 - 2023.5</span>
+                        <span class="project-tags">
+                            <span class="tag">机器学习</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">数据可视化</span>
+                        </span>
+                    </div>
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </div>
+
+                <div class="project-content collapsed">
+                    <section class="project-intro">
+                        <h3>项目介绍</h3>
+                        <p>基于用户行为数据和购买历史，开发了一个用户画像与精准营销系统，提高了营销转化率和客户留存率。</p>
+                    </section>
+
+                    <section class="dataset-info">
+                        <h3>数据集说明</h3>
+                        <ul>
+                            <li>数据来源：用户行为日志、CRM系统、订单数据</li>
+                            <li>时间范围：2022年-2023年</li>
+                            <li>数据量：500万用户、200万订单</li>
+                            <li>特征维度：人口统计学特征、行为特征、消费特征等</li>
+                        </ul>
+                    </section>
+
+                    <section class="analysis-framework">
+                        <h3>技术架构</h3>
+                        <div class="mindmap">
+                            <img src="images/user-profile-architecture.png" alt="用户画像系统架构图">
+                        </div>
+                    </section>
+
+                    <section class="code-samples">
+                        <h3>代码示例</h3>
+                        <div class="code-block">
+                            <h4>用户分群模型</h4>
+                            <pre><code>
+# 使用K-means进行用户分群
+ from sklearn.cluster import KMeans
+ from sklearn.preprocessing import StandardScaler
+
+ # 数据标准化
+ scaler = StandardScaler()
+ X_scaled = scaler.fit_transform(user_features)
+
+ # 建立并训练模型
+ kmeans = KMeans(n_clusters=5, random_state=42)
+ clusters = kmeans.fit_predict(X_scaled)
+
+ # 将分群结果添加到原始数据中
+ user_data['cluster'] = clusters
+                            </code></pre>
+                        </div>
+
+                        <div class="code-block">
+                            <h4>推荐系统实现</h4>
+                            <pre><code>
+# 基于协同过滤的推荐算法
+ from surprise import Dataset, Reader, KNNBasic
+ from surprise.model_selection import train_test_split
+
+ # 加载数据
+ reader = Reader(rating_scale=(1, 5))
+ data = Dataset.load_from_df(ratings_df[['user_id', 'product_id', 'rating']], reader)
+
+ # 划分训练集和测试集
+ trainset, testset = train_test_split(data, test_size=0.2)
+
+ # 建立并训练模型
+ sim_options = {'name': 'pearson_baseline', 'user_based': True}
+ model = KNNBasic(sim_options=sim_options)
+ model.fit(trainset)
+
+ # 生成推荐
+ predictions = model.test(testset)
+                            </code></pre>
+                        </div>
+                    </section>
+
+                    <section class="visualization">
+                        <h3>系统效果</h3>
+                        <div class="results-summary">
+                            <div class="result-item">
+                                <h4>营销转化率提升</h4>
+                                <p class="result-value">+32%</p>
+                                <p>相比传统营销方式</p>
+                            </div>
+                            <div class="result-item">
+                                <h4>客户留存率提升</h4>
+                                <p class="result-value">+18%</p>
+                                <p>精准营销后的用户留存效果</p>
+                            </div>
+                            <div class="result-item">
+                                <h4>平均订单金额提升</h4>
+                                <p class="result-value">+25%</p>
+                                <p>基于个性化推荐的消费增长</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </article>
+
+            <!-- 项目4 -->
+            <article class="project-card">
+                <div class="project-header" onclick="toggleProject(this)">
+                    <h2>全渡道营销数据分析仪表盘</h2>
+                    <div class="project-summary">
+                        <span class="project-period">2022.10 - 2023.1</span>
+                        <span class="project-tags">
+                            <span class="tag">数据可视化</span>
+                            <span class="tag">Power BI</span>
+                            <span class="tag">营销分析</span>
+                        </span>
+                    </div>
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </div>
+
+                <div class="project-content collapsed">
+                    <section class="project-intro">
+                        <h3>项目介绍</h3>
+                        <p>设计并开发了一个全渡道营销数据分析仪表盘，整合线上线下各渠道数据，实现营销效果实时监控和决策支持。</p>
+                    </section>
+
+                    <section class="dataset-info">
+                        <h3>数据来源</h3>
+                        <ul>
+                            <li>线上渠道：官网、微信公众号、小程序、APP、电商平台</li>
+                            <li>线下渠道：实体店铺、展会、推广活动</li>
+                            <li>广告渠道：搜索引擎、社交媒体、展示广告</li>
+                            <li>更新频率：实时/每日/每周</li>
+                        </ul>
+                    </section>
+
+                    <section class="dashboard-features">
+                        <h3>仪表盘功能</h3>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <i class="fas fa-chart-line"></i>
+                                <h4>渠道效果分析</h4>
+                                <p>各渠道投入产出比(ROI)分析，实时调整营销策略</p>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-funnel-dollar"></i>
+                                <h4>转化漏斗分析</h4>
+                                <p>跟踪客户旅程各环节转化率，发现改进机会</p>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-users"></i>
+                                <h4>客户组分析</h4>
+                                <p>按人口统计学特征、地理位置等维度分析客户组效果</p>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <h4>时间序列分析</h4>
+                                <p>跟踪关键指标的时间趋势，发现季节性模式</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="technical-details">
+                        <h3>技术实现</h3>
+                        <ul class="tech-list">
+                            <li><span class="tech-label">ETL流程</span>: Power Query自动化数据提取、转换和加载</li>
+                            <li><span class="tech-label">数据建模</span>: Power BI DAX表达式创建复杂计算度量和关键指标</li>
+                            <li><span class="tech-label">交互设计</span>: 使用切片器、链接报表和钩子实现多维度分析</li>
+                            <li><span class="tech-label">自动化更新</span>: 配置数据网关和计划任务实现自动化数据刷新</li>
+                        </ul>
+                    </section>
+
+                    <section class="visualization">
+                        <h3>仪表盘展示</h3>
+                        <div class="dashboard-preview">
+                            <img src="images/marketing-dashboard.png" alt="全渡道营销数据分析仪表盘预览">
+                        </div>
+                    </section>
+
+                    <section class="business-impact">
+                        <h3>业务价值</h3>
+                        <div class="results-summary">
+                            <div class="result-item">
+                                <h4>营销预算优化</h4>
+                                <p class="result-value">降低20%</p>
+                                <p>通过数据驱动的渠道调整</p>
+                            </div>
+                            <div class="result-item">
+                                <h4>决策时间缩短</h4>
+                                <p class="result-value">75%</p>
+                                <p>从每周分析到实时监控</p>
+                            </div>
+                            <div class="result-item">
+                                <h4>总体营销ROI提升</h4>
+                                <p class="result-value">+35%</p>
+                                <p>基于数据驱动的营销决策</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </article>
+
+            <!-- 项目5 -->
+            <article class="project-card">
+                <div class="project-header" onclick="toggleProject(this)">
+                    <h2>销售预测与库存优化系统</h2>
+                    <div class="project-summary">
+                        <span class="project-period">2022.5 - 2022.9</span>
+                        <span class="project-tags">
+                            <span class="tag">机器学习</span>
+                            <span class="tag">时间序列预测</span>
+                            <span class="tag">供应链优化</span>
+                        </span>
+                    </div>
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </div>
+
+                <div class="project-content collapsed">
+                    <section class="project-intro">
+                        <h3>项目介绍</h3>
+                        <p>开发了一个基于机器学习的销售预测与库存优化系统，提高了预测准确率并显著降低了库存成本。</p>
+                    </section>
+
+                    <section class="project-challenges">
+                        <h3>项目挑战</h3>
+                        <div class="challenges-grid">
+                            <div class="challenge-item">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <h4>销售波动性大</h4>
+                                <p>产品销售受季节性、促销活动和市场趋势影响，波动性大</p>
+                            </div>
+                            <div class="challenge-item">
+                                <i class="fas fa-boxes"></i>
+                                <h4>库存成本高</h4>
+                                <p>过多库存占用资金，过少库存导致缺货和销售损失</p>
+                            </div>
+                            <div class="challenge-item">
+                                <i class="fas fa-truck-loading"></i>
+                                <h4>供应链复杂性</h4>
+                                <p>多供应商、多仓库、不同产品交付周期导致供应链复杂</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="solution-approach">
+                        <h3>解决方案</h3>
+                        <div class="approach-steps">
+                            <div class="approach-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>数据整合与预处理</h4>
+                                    <p>整合历史销售数据、库存数据、促销活动信息和外部因素（如天气、假期等）</p>
+                                </div>
+                            </div>
+                            <div class="approach-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>多模型预测系统</h4>
+                                    <p>开发基于 ARIMA、Prophet 和 LSTM 的多模型预测系统，并使用集成学习提高预测准确性</p>
+                                </div>
+                            </div>
+                            <div class="approach-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>库存优化算法</h4>
+                                    <p>基于预测结果和供应链约束，开发库存优化算法，平衡缺货风险与库存成本</p>
+                                </div>
+                            </div>
+                            <div class="approach-step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h4>可视化决策支持</h4>
+                                    <p>开发交互式仪表盘，展示预测结果、库存建议和关键指标，支持业务决策</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="code-samples">
+                        <h3>代码示例</h3>
+                        <div class="code-block">
+                            <h4>LSTM 预测模型</h4>
+                            <pre><code>
+# 使用 LSTM 进行时间序列预测
+ import numpy as np
+ import tensorflow as tf
+ from tensorflow.keras.models import Sequential
+ from tensorflow.keras.layers import LSTM, Dense, Dropout
+
+ # 数据准备
+ def create_sequences(data, seq_length):
+     X, y = [], []
+     for i in range(len(data) - seq_length):
+         X.append(data[i:i + seq_length, :])
+         y.append(data[i + seq_length, 0])
+     return np.array(X), np.array(y)
+
+ # 构建 LSTM 模型
+ model = Sequential()
+ model.add(LSTM(50, return_sequences=True, input_shape=(seq_length, n_features)))
+ model.add(Dropout(0.2))
+ model.add(LSTM(50))
+ model.add(Dropout(0.2))
+ model.add(Dense(1))
+ model.compile(optimizer='adam', loss='mse')
+
+ # 训练模型
+ history = model.fit(
+     X_train, y_train,
+     epochs=100,
+     batch_size=32,
+     validation_data=(X_val, y_val),
+     callbacks=[early_stopping]
+ )
+                            </code></pre>
+                        </div>
+
+                        <div class="code-block">
+                            <h4>库存优化算法</h4>
+                            <pre><code>
+# 库存优化算法
+ def optimize_inventory(forecast, lead_time, service_level=0.95):
+     # 计算安全库存
+     z_score = stats.norm.ppf(service_level)
+     forecast_errors = np.abs(forecast - actual_sales)
+     rmse = np.sqrt(np.mean(forecast_errors**2))
+     safety_stock = z_score * rmse * np.sqrt(lead_time)
+
+     # 计算经济订购数量 (EOQ)
+     annual_demand = np.sum(forecast) * (365 / len(forecast))
+     order_cost = 50  # 每次订购成本
+     holding_cost = 0.2  # 库存持有成本率
+     unit_cost = 10  # 单位成本
+
+     eoq = np.sqrt((2 * annual_demand * order_cost) / (holding_cost * unit_cost))
+
+     # 计算再订购点 (ROP)
+     daily_demand = annual_demand / 365
+     rop = daily_demand * lead_time + safety_stock
+
+     return {
+         'safety_stock': safety_stock,
+         'eoq': eoq,
+         'reorder_point': rop
+     }
+                            </code></pre>
+                        </div>
+                    </section>
+
+                    <section class="visualization">
+                        <h3>系统展示</h3>
+                        <div class="dashboard-preview">
+                            <img src="images/inventory-forecast.png" alt="销售预测与库存优化系统预览">
+                        </div>
+                    </section>
+
+                    <section class="business-impact">
+                        <h3>业务成果</h3>
+                        <div class="results-summary">
+                            <div class="result-item">
+                                <h4>预测准确率提升</h4>
+                                <p class="result-value">+28%</p>
+                                <p>相比传统预测方法</p>
+                            </div>
+                            <div class="result-item">
+                                <h4>库存成本降低</h4>
+                                <p class="result-value">22%</p>
+                                <p>通过优化库存策略</p>
+                            </div>
+                            <div class="result-item">
+                                <h4>缺货率降低</h4>
+                                <p class="result-value">85%</p>
+                                <p>保持服务水平的同时减少缺货情况</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </article>
         </section>
     </main>
 
@@ -172,9 +554,9 @@ plt.show()
                     <ul>
                         <li><a href="index.html">首页</a></li>
                         <li><a href="resume.html">简历</a></li>
-                        <li><a href="skills.html">个人优势</a></li>
                         <li><a href="projects.html">项目展示</a></li>
                         <li><a href="honors.html">个人荣誉</a></li>
+                        <li><a href="skills.html">个人优势</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
