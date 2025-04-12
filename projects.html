@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>项目展示 - 数据分析师/业务运营</title>
+    <meta name="description" content="庄春萌 - 数据分析师与业务运营专家的项目展示与案例分析">
+    <title>庄春萌 - 数据分析师/业务运营专家的项目展示</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/projects.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -11,7 +12,7 @@
 <body>
     <header>
         <nav class="navbar">
-            <div class="logo">我的个人网站</div>
+            <div class="logo">庄春萌 | Zhuang Chunmeng</div>
             <ul class="nav-links">
                 <li><a href="index.html">首页</a></li>
                 <li><a href="resume.html">简历</a></li>
@@ -25,7 +26,7 @@
     <main>
         <section id="data-analysis" class="project-section">
             <h1>数据分析项目展示</h1>
-            
+
             <!-- 项目1 -->
             <article class="project-card">
                 <div class="project-header" onclick="toggleProject(this)">
@@ -40,7 +41,7 @@
                     </div>
                     <i class="fas fa-chevron-down toggle-icon"></i>
                 </div>
-                
+
                 <div class="project-content collapsed">
                     <section class="project-intro">
                         <h3>项目介绍</h3>
@@ -70,7 +71,7 @@
                             <h4>SQL分析示例</h4>
                             <pre><code>
 -- 用户购买行为分析
-SELECT 
+SELECT
     user_id,
     COUNT(DISTINCT order_id) as order_count,
     SUM(amount) as total_amount,
@@ -124,7 +125,7 @@ plt.show()
                     </div>
                     <i class="fas fa-chevron-down toggle-icon"></i>
                 </div>
-                
+
                 <div class="project-content collapsed">
                     <section class="project-intro">
                         <h3>项目介绍</h3>
@@ -160,9 +161,34 @@ plt.show()
     </main>
 
     <footer>
-        <p>&copy; 2024 个人网站. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>庄春萌 | Zhuang Chunmeng</h3>
+                <p>数据分析师 / 业务运营专家</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-nav">
+                    <h4>导航</h4>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="resume.html">简历</a></li>
+                        <li><a href="skills.html">个人优势</a></li>
+                        <li><a href="projects.html">项目展示</a></li>
+                        <li><a href="honors.html">个人荣誉</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>联系方式</h4>
+                    <p><i class="fas fa-envelope"></i> Zhuangchunmeng12@163.com</p>
+                    <p><i class="fas fa-phone"></i> 138-xxxx-xxxx</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 庄春萌个人网站. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="js/main.js"></script>
 </body>
-</html> 
+</html>

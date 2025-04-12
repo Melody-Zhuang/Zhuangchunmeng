@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人网站 - 数据分析师/业务运营</title>
+    <meta name="description" content="庄春萌 - 数据分析师与业务运营专家的个人网站，展示专业技能、项目经验和个人成就">
+    <meta name="keywords" content="数据分析师, 业务运营, 数据可视化, Power BI, Python, SQL">
+    <title>庄春萌 - 数据分析师/业务运营专家</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <div class="logo">我的个人网站</div>
+            <div class="logo">庄春萌 | Zhuang Chunmeng</div>
             <ul class="nav-links">
                 <li><a href="index.html" class="active">首页</a></li>
                 <li><a href="resume.html">简历</a></li>
@@ -22,20 +25,137 @@
 
     <main>
         <section class="hero">
-            <h1>欢迎来到我的个人网站</h1>
-            <p>数据分析师 / 业务运营专家</p>
+            <div class="hero-content">
+                <h1>数据驱动<span class="highlight">决策</span><br>业务增长<span class="highlight">专家</span></h1>
+                <p class="subtitle">数据分析师 / 业务运营专家</p>
+                <div class="hero-buttons">
+                    <a href="resume.html" class="btn primary-btn">查看简历</a>
+                    <a href="projects.html" class="btn secondary-btn">项目展示</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/profile.jpg" alt="庄春萌个人照片" class="profile-image">
+            </div>
         </section>
 
         <section class="introduction">
-            <h2>关于我</h2>
-            <p>我是一名充满热情的数据分析师和业务运营专家，致力于通过数据驱动决策，帮助企业实现业务增长。</p>
+            <h2>关于我 <span class="accent">About Me</span></h2>
+            <div class="about-content">
+                <p class="about-text">我是一名充满热情的<strong>数据分析师</strong>和<strong>业务运营专家</strong>，拥有丰富的数据分析和业务优化经验。我擅长通过数据挖掘和可视化，发现业务洞察，为企业决策提供数据支持。</p>
+                <p class="about-text">我的专业领域包括：</p>
+                <ul class="expertise-list">
+                    <li><i class="fas fa-chart-line"></i> 数据分析与可视化</li>
+                    <li><i class="fas fa-users"></i> 用户行为分析</li>
+                    <li><i class="fas fa-bullseye"></i> 业务运营优化</li>
+                    <li><i class="fas fa-project-diagram"></i> 数据驱动决策</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="highlights">
+            <h2>核心技能 <span class="accent">Key Skills</span></h2>
+            <div class="skills-highlights">
+                <div class="skill-highlight-card">
+                    <i class="fas fa-database"></i>
+                    <h3>数据分析</h3>
+                    <p>精通SQL、Python等数据分析工具，能够从复杂数据中提取有价值的业务洞察</p>
+                </div>
+                <div class="skill-highlight-card">
+                    <i class="fas fa-chart-pie"></i>
+                    <h3>数据可视化</h3>
+                    <p>熟练使用Power BI等工具，创建直观、有效的数据可视化报表</p>
+                </div>
+                <div class="skill-highlight-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>业务分析</h3>
+                    <p>深入理解业务流程，能够将数据分析结果转化为可执行的业务策略</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-projects">
+            <h2>精选项目 <span class="accent">Featured Projects</span></h2>
+            <div class="project-cards">
+                <div class="project-card-mini" onclick="window.location.href='projects.html#data-analysis'">
+                    <div class="project-card-image">
+                        <img src="images/project1.jpg" alt="电商用户行为分析项目">
+                    </div>
+                    <div class="project-card-content">
+                        <h3>电商用户行为分析</h3>
+                        <p>通过数据挖掘和可视化，发现用户购买行为特征，为精准营销提供数据支持</p>
+                        <a href="projects.html#data-analysis" class="read-more">查看详情 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card-mini" onclick="window.location.href='projects.html#platform'">
+                    <div class="project-card-image">
+                        <img src="images/project2.jpg" alt="业务运营数据分析平台">
+                    </div>
+                    <div class="project-card-content">
+                        <h3>业务运营数据分析平台</h3>
+                        <p>设计并实现业务运营数据分析平台，整合多个数据源，提供实时数据监控和分析功能</p>
+                        <a href="projects.html#platform" class="read-more">查看详情 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all-projects">
+                <a href="projects.html" class="btn outline-btn">查看所有项目 <i class="fas fa-external-link-alt"></i></a>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <h2>联系我 <span class="accent">Contact Me</span></h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>Zhuangchunmeng12@163.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>138-xxxx-xxxx</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>北京市</p>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/yourusername" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 个人网站. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>庄春萌 | Zhuang Chunmeng</h3>
+                <p>数据分析师 / 业务运营专家</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-nav">
+                    <h4>导航</h4>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="resume.html">简历</a></li>
+                        <li><a href="skills.html">个人优势</a></li>
+                        <li><a href="projects.html">项目展示</a></li>
+                        <li><a href="honors.html">个人荣誉</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>联系方式</h4>
+                    <p><i class="fas fa-envelope"></i> Zhuangchunmeng12@163.com</p>
+                    <p><i class="fas fa-phone"></i> 138-xxxx-xxxx</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 庄春萌个人网站. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="js/main.js"></script>
 </body>
-</html> 
+</html>
