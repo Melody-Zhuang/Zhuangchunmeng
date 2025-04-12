@@ -9,6 +9,34 @@
     overflow: hidden;
 }
 
+.download-resume-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 0.8rem 1.5rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.download-resume-btn:hover {
+    background: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.download-resume-btn i {
+    font-size: 1.1rem;
+}
+
 .resume-container::before {
     content: '';
     position: absolute;
@@ -274,4 +302,4 @@
     .certificates-list {
         grid-template-columns: 1fr;
     }
-} 
+}
