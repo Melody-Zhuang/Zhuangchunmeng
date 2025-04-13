@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="庄春萌 - 数据分析师与业务运营专家的个人优势与核心能力">
-    <title>庄春萌 - 数据分析师/业务运营专家的个人优势</title>
+    <meta name="description" content="庄春萌 - 数据分析师与业务运营专家的个人优势展示">
+    <meta name="keywords" content="数据分析师, 业务运营, 数据可视化, Power BI, Python, SQL, 个人优势">
+    <title>个人优势 - 庄春萌</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- 添加Chart.js库，用于绘制技能雷达图 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header>
@@ -23,31 +26,215 @@
     </header>
 
     <main>
-        <section class="skills-section">
-            <h1>个人核心优势</h1>
-            <div class="skills-grid">
-                <div class="skill-card" onclick="window.location.href='projects.html#data-analysis'">
-                    <h3>思维能力</h3>
-                    <div class="tooltip">已制作50+数据分析思维导图</div>
-                    <p>擅长数据分析和问题解决，能够快速理解复杂业务场景</p>
-                </div>
+        <section class="page-header">
+            <div class="header-content">
+                <h1>我的<span class="highlight">核心优势</span></h1>
+                <p class="subtitle">专业技能 + 实际项目 = 真实价值</p>
+            </div>
+        </section>
 
-                <div class="skill-card" onclick="window.location.href='projects.html#learning'">
-                    <h3>学习能力</h3>
-                    <div class="tooltip">持续学习新技术和工具</div>
-                    <p>具备快速学习能力，能够适应新技术和业务变化</p>
+        <section class="skills-overview">
+            <div class="container">
+                <h2>技能概览 <span class="accent">Skills Overview</span></h2>
+                <div class="skills-radar-container">
+                    <div class="radar-chart-wrapper">
+                        <canvas id="skillsRadarChart"></canvas>
+                    </div>
+                    <div class="skills-summary">
+                        <p><i class="fas fa-trophy"></i> 超过<strong>5年</strong>数据分析与业务运营经验</p>
+                        <p><i class="fas fa-project-diagram"></i> 主导完成<strong>15+</strong>数据分析与运营优化项目</p>
+                        <p><i class="fas fa-chart-line"></i> 为企业创造<strong>20%+</strong>业务增长</p>
+                        <p><i class="fas fa-database"></i> 处理分析<strong>TB级</strong>用户行为与交易数据</p>
+                        <p><i class="fas fa-users"></i> 跨部门协作能力，连接技术团队与业务部门</p>
+                    </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="skill-card" onclick="window.location.href='projects.html#technical'">
-                    <h3>技术能力</h3>
-                    <div class="tooltip">精通SQL、Python、Power BI等工具</div>
-                    <p>熟练掌握数据分析工具和技术栈</p>
+        <section class="technical-skills">
+            <div class="container">
+                <h2>技术能力 <span class="accent">Technical Skills</span></h2>
+                <div class="skill-category-grid">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-code"></i> 编程与数据处理</h3>
+                        <div class="skill-bars">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>SQL</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 95%"></div>
+                                </div>
+                                <div class="skill-detail">
+                                    精通复杂SQL查询、存储过程和优化，能从TB级数据中高效提取业务洞察
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Python</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 85%"></div>
+                                </div>
+                                <div class="skill-detail">
+                                    熟练使用Pandas、NumPy、Scikit-learn进行数据清洗、分析和建模
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>R</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 75%"></div>
+                                </div>
+                                <div class="skill-detail">
+                                    能够使用R进行统计分析、假设检验和可视化
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><i class="fas fa-chart-pie"></i> 数据可视化与BI工具</h3>
+                        <div class="skill-bars">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Power BI</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 90%"></div>
+                                </div>
+                                <div class="skill-detail">
+                                    创建过10+企业级仪表盘，帮助管理层实时监控业务指标
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Tableau</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 80%"></div>
+                                </div>
+                                <div class="skill-detail">
+                                    熟练创建交互式可视化报表，讲述数据故事
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Excel高级分析</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 95%"></div>
+                                </div>
+                                <div class="skill-detail">
+                                    精通数据透视表、高级函数和VBA宏，快速构建分析模型
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="skill-card" onclick="window.location.href='projects.html#business'">
-                    <h3>业务能力</h3>
-                    <div class="tooltip">丰富的业务分析和运营经验</div>
-                    <p>深入理解业务流程，能够提供数据驱动的解决方案</p>
+        <section class="business-skills">
+            <div class="container">
+                <h2>业务能力 <span class="accent">Business Skills</span></h2>
+                <div class="business-skills-grid">
+                    <div class="business-skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>数据驱动决策</h3>
+                        <p class="skill-description">能将复杂数据转化为可执行的业务洞察，支持管理层决策</p>
+                        <div class="skill-highlight">
+                            <strong>实际案例：</strong>通过客户生命周期分析优化营销策略，提升客户留存率20%
+                        </div>
+                    </div>
+                    <div class="business-skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <h3>用户行为分析</h3>
+                        <p class="skill-description">深入分析用户行为数据，找出改进产品和服务的机会</p>
+                        <div class="skill-highlight">
+                            <strong>实际案例：</strong>识别用户流失原因，设计挽留策略，减少流失率15%
+                        </div>
+                    </div>
+                    <div class="business-skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <h3>流程优化</h3>
+                        <p class="skill-description">识别业务流程中的瓶颈，提出基于数据的优化方案</p>
+                        <div class="skill-highlight">
+                            <strong>实际案例：</strong>优化订单处理流程，提高处理效率30%，降低人力成本
+                        </div>
+                    </div>
+                    <div class="business-skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>战略规划</h3>
+                        <p class="skill-description">基于市场数据和竞争分析，协助制定业务增长战略</p>
+                        <div class="skill-highlight">
+                            <strong>实际案例：</strong>开发新市场进入策略，数据分析支持首年业务增长35%
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="certificates">
+            <div class="container">
+                <h2>专业认证 <span class="accent">Certificates</span></h2>
+                <div class="certificates-grid">
+                    <div class="certificate-card">
+                        <div class="certificate-logo">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="certificate-info">
+                            <h3>Microsoft Power BI数据分析师</h3>
+                            <p class="certificate-date">2022年获得</p>
+                            <p class="certificate-description">微软官方认证，验证在Power BI环境中设计和构建商业智能解决方案的能力</p>
+                        </div>
+                    </div>
+                    <div class="certificate-card">
+                        <div class="certificate-logo">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="certificate-info">
+                            <h3>Google数据分析专业证书</h3>
+                            <p class="certificate-date">2021年获得</p>
+                            <p class="certificate-description">Google官方认证，涵盖数据分析全流程，包括数据清洗、分析和可视化</p>
+                        </div>
+                    </div>
+                    <div class="certificate-card">
+                        <div class="certificate-logo">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="certificate-info">
+                            <h3>Python数据科学专业认证</h3>
+                            <p class="certificate-date">2020年获得</p>
+                            <p class="certificate-description">DataCamp认证，证明在Python环境下进行数据分析和机器学习的能力</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="call-to-action">
+            <div class="container">
+                <h2>让我们一起创造数据驱动的成功</h2>
+                <p>想了解我如何为您的团队创造价值？请查看我的详细项目案例或直接联系我</p>
+                <div class="cta-buttons">
+                    <a href="projects.html" class="btn primary-btn">查看项目案例</a>
+                    <a href="mailto:Zhuangchunmeng12@163.com" class="btn outline-btn">联系我</a>
                 </div>
             </div>
         </section>
@@ -73,7 +260,7 @@
                 <div class="footer-contact">
                     <h4>联系方式</h4>
                     <p><i class="fas fa-envelope"></i> Zhuangchunmeng12@163.com</p>
-                    <p><i class="fas fa-phone"></i> 138-xxxx-xxxx</p>
+                    <p><i class="fas fa-phone"></i> 138-6353-3037</p>
                 </div>
             </div>
         </div>
@@ -83,5 +270,38 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        // 创建技能雷达图
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('skillsRadarChart').getContext('2d');
+            const skillsRadarChart = new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: ['数据分析', '数据可视化', '业务运营', '项目管理', '战略规划', '沟通协作'],
+                    datasets: [{
+                        label: '技能水平',
+                        data: [95, 90, 85, 80, 85, 90],
+                        backgroundColor: 'rgba(67, 97, 238, 0.2)',
+                        borderColor: 'rgba(67, 97, 238, 1)',
+                        pointBackgroundColor: 'rgba(67, 97, 238, 1)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgba(67, 97, 238, 1)'
+                    }]
+                },
+                options: {
+                    scales: {
+                        r: {
+                            angleLines: {
+                                display: true
+                            },
+                            suggestedMin: 0,
+                            suggestedMax: 100
+                        }
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>

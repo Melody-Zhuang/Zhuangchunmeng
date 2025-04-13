@@ -153,13 +153,14 @@ main {
 }
 
 .profile-image {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
     border-radius: 50%;
     border: 5px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
+    background-color: white;
 }
 
 .profile-image:hover {
@@ -523,13 +524,14 @@ main {
 
 .project-card-image {
     height: 200px;
+    position: relative;
     overflow: hidden;
 }
 
 .project-card-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: transform 0.5s ease;
 }
 
@@ -768,4 +770,629 @@ footer p {
     .introduction {
         padding: 2rem 1.5rem;
     }
+}
+
+/* 个人优势页面样式 */
+.page-header {
+    background: var(--gradient);
+    color: white;
+    padding: 5rem 2rem 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    border-radius: var(--border-radius);
+}
+
+.page-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.skills-radar-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem 0 3rem;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.radar-chart-wrapper {
+    flex: 1;
+    min-width: 300px;
+    height: 350px;
+}
+
+.skills-summary {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.skills-summary p {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 1.2rem;
+    background: rgba(67, 97, 238, 0.05);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.skills-summary p i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.skills-summary strong {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.technical-skills, .business-skills, .certificates {
+    padding: 3rem 0;
+    margin-bottom: 3rem;
+}
+
+.skill-category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 2rem;
+}
+
+.skill-category {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.skill-category h3 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.skill-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.skill-item {
+    margin-bottom: 1rem;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.skill-bar {
+    height: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 0.8rem;
+}
+
+.skill-level {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+}
+
+.skill-detail {
+    font-size: 0.9rem;
+    color: var(--light-text);
+}
+
+.business-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.business-skill-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.business-skill-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--primary-color);
+}
+
+.business-skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.skill-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.business-skill-card h3 {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.skill-description {
+    margin-bottom: 1.5rem;
+    color: var(--light-text);
+}
+
+.skill-highlight {
+    background: rgba(67, 97, 238, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.certificate-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    gap: 1.5rem;
+    transition: var(--transition);
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.certificate-logo {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.certificate-info h3 {
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.certificate-date {
+    color: var(--light-text);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.certificate-description {
+    color: var(--light-text);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.call-to-action {
+    background: var(--gradient);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: var(--border-radius);
+    margin-bottom: 3rem;
+}
+
+.call-to-action h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.call-to-action p {
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* 响应式设计补充 */
+@media (max-width: 768px) {
+    .skill-category-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .business-skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .certificates-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .radar-chart-wrapper {
+        width: 100%;
+    }
+}
+
+/* 项目展示页面样式 */
+.project-filter-section {
+    margin-bottom: 3rem;
+}
+
+.filter-container {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.filter-btn {
+    padding: 0.7rem 1.5rem;
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    color: var(--primary-color);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 0.95rem;
+}
+
+.filter-btn:hover {
+    background: rgba(67, 97, 238, 0.1);
+}
+
+.filter-btn.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* 精选项目部分 */
+.featured-project {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    margin-bottom: 4rem;
+}
+
+.featured-project-image {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.featured-project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.featured-project:hover .featured-project-image img {
+    transform: scale(1.05);
+}
+
+.project-category {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.featured-project-content {
+    flex: 2;
+    min-width: 300px;
+    padding: 2.5rem;
+}
+
+.featured-project-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.project-tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-bottom: 1.5rem;
+}
+
+.tech-tag {
+    background: rgba(67, 97, 238, 0.1);
+    color: var(--primary-color);
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.project-description {
+    margin-bottom: 2rem;
+    color: var(--light-text);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.detail-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--text-color);
+}
+
+.detail-item h3 i {
+    color: var(--primary-color);
+}
+
+.detail-item ul {
+    list-style: none;
+    margin-left: 2rem;
+}
+
+.detail-item li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
+    color: var(--light-text);
+}
+
+.detail-item li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    background: var(--primary-color);
+    border-radius: 50%;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.result-item {
+    text-align: center;
+    background: rgba(67, 97, 238, 0.05);
+    padding: 1.5rem 1rem;
+    border-radius: var(--border-radius);
+}
+
+.result-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.result-label {
+    font-size: 0.9rem;
+    color: var(--light-text);
+}
+
+/* 项目网格部分 */
+.projects-grid-section {
+    margin-bottom: 4rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.project-card-image {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-card-image img {
+    transform: scale(1.1);
+}
+
+.project-card-content {
+    padding: 2rem;
+}
+
+.project-card-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.project-card-content p {
+    color: var(--light-text);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.project-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.highlight-item i {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.view-project-btn {
+    width: 100%;
+}
+
+.project-cta {
+    background: var(--gradient);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    padding: 0;
+    margin-bottom: 3rem;
+}
+
+.cta-content {
+    padding: 4rem 2rem;
+    text-align: center;
+    color: white;
+}
+
+.cta-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-content p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    opacity: 0.9;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .filter-buttons {
+        gap: 0.5rem;
+    }
+    
+    .filter-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .featured-project-content {
+        padding: 1.5rem;
+    }
+    
+    .featured-project-content h2 {
+        font-size: 1.6rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.project-link {
+    margin-top: 2rem;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.project-link .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+}
+
+.project-link i {
+    margin-left: 0.5rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+}
+
+.project-links .btn {
+    flex: 1;
+    padding: 0.7rem 0.5rem;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.project-card-content .primary-btn {
+    width: 100%;
+    margin-top: 1.5rem;
 }
