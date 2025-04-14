@@ -1,0 +1,184 @@
+/* 数据看板展示样式 */
+
+.dashboards-section {
+    padding: 5rem 0;
+    background-color: var(--background-color);
+}
+
+.section-intro {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.section-intro p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--light-text);
+}
+
+.dashboards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.second-row {
+    margin-top: 1rem;
+}
+
+.dashboard-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-preview {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.dashboard-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.dashboard-card:hover .dashboard-preview img {
+    transform: scale(1.05);
+}
+
+.dashboard-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.dashboard-card:hover .dashboard-overlay {
+    opacity: 1;
+}
+
+.view-dashboard-btn {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.dashboard-card:hover .view-dashboard-btn {
+    transform: translateY(0);
+}
+
+.view-dashboard-btn:hover {
+    background: var(--secondary-color);
+}
+
+.dashboard-info {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-color);
+}
+
+.dashboard-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tool-tag {
+    background: var(--background-color);
+    color: var(--primary-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.dashboard-info p {
+    color: var(--light-text);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.view-more-dashboards {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.view-more-dashboards .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.view-more-dashboards .btn i {
+    transition: transform 0.3s ease;
+}
+
+.view-more-dashboards .btn:hover i {
+    transform: translateX(5px);
+}
+
+/* 响应式设计 */
+@media (max-width: 992px) {
+    .dashboards-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboards-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+    
+    .dashboard-preview {
+        height: 180px;
+    }
+    
+    .dashboard-info h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .dashboards-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .dashboard-preview {
+        height: 200px;
+    }
+}
