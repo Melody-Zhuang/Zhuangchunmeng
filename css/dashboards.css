@@ -130,7 +130,31 @@
 .dashboard-info p {
     color: var(--light-text);
     line-height: 1.6;
-    margin-bottom: 0;
+    margin-bottom: 1rem;
+}
+
+.dashboard-highlights {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.highlight-item i {
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.highlight-item span {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
 .view-more-dashboards {
@@ -163,11 +187,11 @@
     .dashboards-grid {
         grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     }
-    
+
     .dashboard-preview {
         height: 180px;
     }
-    
+
     .dashboard-info h3 {
         font-size: 1.2rem;
     }
@@ -177,7 +201,7 @@
     .dashboards-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .dashboard-preview {
         height: 200px;
     }

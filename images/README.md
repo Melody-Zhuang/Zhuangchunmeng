@@ -21,7 +21,7 @@
 15. `dev-project3.jpg` - 智能学习助手
 
 # 数据看板图片
-16. `dashboard1.jpg` - 销售分析看板
+16. `health-product-dashboard.jpg` - 保健品监控看板
 17. `dashboard2.jpg` - 运营KPI监控看板
 18. `dashboard3.jpg` - 客户画像分析看板
 19. `dashboard4.jpg` - 库存管理看板
