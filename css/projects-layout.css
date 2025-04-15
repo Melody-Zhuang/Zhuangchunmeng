@@ -1,0 +1,637 @@
+/* 项目展示页面布局优化 */
+
+/* 全局布局优化 */
+.projects-page {
+    background-color: var(--background-color);
+    overflow-x: hidden;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title h2 .accent {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border-radius: 2px;
+}
+
+.section-intro {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    color: var(--light-text);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* 项目卡片网格布局优化 */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+/* 项目卡片样式优化 */
+.project-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: all 0.4s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* 确保所有项目卡片高度一致 */
+.projects-grid {
+    align-items: stretch;
+}
+
+.projects-grid .project-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card-image {
+    height: 220px; /* 固定高度 */
+}
+
+.project-card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-highlights {
+    margin-top: auto;
+    margin-bottom: 1.5rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    min-height: 48px; /* 确保按钮区域有最小高度 */
+    align-items: center;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.project-card-image {
+    position: relative;
+    overflow: hidden;
+    height: 220px;
+}
+
+.project-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.project-card:hover .project-card-image img {
+    transform: scale(1.05);
+}
+
+.project-category {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.project-card-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: 320px; /* 确保最小高度一致 */
+}
+
+.project-card-content h3 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.project-tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.tech-tag {
+    background: rgba(67, 97, 238, 0.1);
+    color: var(--primary-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.project-card-content p {
+    color: var(--light-text);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.project-highlights {
+    margin-top: auto;
+    margin-bottom: 1.5rem;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.8rem;
+    gap: 0.8rem;
+}
+
+.highlight-item i {
+    color: var(--accent-color);
+    font-size: 1rem;
+    margin-top: 0.2rem;
+}
+
+.highlight-item span {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* 看板卡片样式优化 */
+.dashboards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+    align-items: stretch;
+}
+
+.dashboard-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: all 0.4s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-preview {
+    position: relative;
+    overflow: hidden;
+    height: 220px;
+}
+
+.dashboard-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.dashboard-card:hover .dashboard-preview img {
+    transform: scale(1.05);
+}
+
+.dashboard-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.dashboard-overlay .view-dashboard-btn {
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    height: 48px; /* 确保看板按钮高度一致 */
+}
+
+.dashboard-card:hover .dashboard-overlay {
+    opacity: 1;
+}
+
+.view-dashboard-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+    cursor: pointer;
+    background: var(--accent-color);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    gap: 0.5rem;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+}
+
+.dashboard-card:hover .view-dashboard-btn {
+    transform: translateY(0);
+}
+
+.view-dashboard-btn:hover {
+    background: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.dashboard-info {
+    padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 320px; /* 确保最小高度一致 */
+}
+
+.dashboards-grid .dashboard-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-preview {
+    height: 220px; /* 固定高度，与项目卡片图片高度一致 */
+}
+
+.dashboard-info h3 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.dashboard-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.tool-tag {
+    background: rgba(76, 175, 80, 0.1);
+    color: #4CAF50;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.dashboard-info p {
+    color: var(--light-text);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.dashboard-highlights {
+    margin-top: auto;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.dashboard-highlights .highlight-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
+
+.dashboard-highlights .highlight-item i {
+    color: #4CAF50; /* 看板高亮图标使用绿色 */
+    font-size: 1rem;
+    margin-top: 0.2rem;
+}
+
+.dashboard-highlights .highlight-item span {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* 开发项目卡片样式优化 */
+
+.dev-project-links {
+    min-height: 48px; /* 确保按钮区域有最小高度 */
+    align-items: center;
+}
+
+.dev-project-links .primary-btn {
+    background-color: #9C27B0;
+    border-color: #7B1FA2;
+}
+
+.dev-project-links .primary-btn:hover {
+    background-color: #AB47BC;
+    border-color: #9C27B0;
+    box-shadow: 0 5px 15px rgba(156, 39, 176, 0.5);
+}
+.dev-projects-grid {
+    display: grid;
+    grid-template-columns: minmax(350px, 800px);
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+    justify-content: center;
+}
+
+.dev-project-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dev-project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.dev-project-image {
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+}
+
+.dev-project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.dev-project-card:hover .dev-project-image img {
+    transform: scale(1.05);
+}
+
+.dev-project-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(156, 39, 176, 0.8);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.dev-project-content {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.dev-project-content h3 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 1.2rem;
+    line-height: 1.4;
+}
+
+.dev-project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.dev-project-tech .tech-tag {
+    background: rgba(156, 39, 176, 0.1);
+    color: #9C27B0;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.dev-project-content p {
+    color: var(--light-text);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.dev-project-highlights {
+    margin-bottom: 2rem;
+}
+
+.dev-project-highlights .highlight-item {
+    margin-bottom: 1rem;
+}
+
+.dev-project-highlights .highlight-item i {
+    color: #9C27B0;
+}
+
+.dev-project-highlights .highlight-item span {
+    font-size: 1rem;
+}
+
+/* 项目CTA部分优化 */
+.project-cta {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    padding: 5rem 0;
+    margin: 4rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 L0,100 Z" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></svg>');
+    opacity: 0.1;
+}
+
+.cta-content {
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* 响应式设计优化 */
+@media (max-width: 1200px) {
+    .projects-grid,
+    .dashboards-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 992px) {
+    .section-title h2 {
+        font-size: 2.2rem;
+    }
+
+    .project-card-image,
+    .dashboard-preview {
+        height: 200px;
+    }
+
+    .dev-project-image {
+        height: 250px;
+    }
+
+    .dev-projects-grid {
+        grid-template-columns: minmax(300px, 700px);
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-intro {
+        font-size: 1rem;
+        padding: 0 1.5rem;
+    }
+
+    .projects-grid,
+    .dashboards-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1.5rem;
+    }
+
+    .project-card-content,
+    .dashboard-info,
+    .dev-project-content {
+        padding: 1.5rem;
+    }
+
+    .project-card-content h3,
+    .dashboard-info h3 {
+        font-size: 1.3rem;
+    }
+
+    .dev-project-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .project-card-content p,
+    .dashboard-info p {
+        font-size: 0.95rem;
+    }
+
+    .dev-project-content p {
+        font-size: 1rem;
+    }
+
+    .project-cta {
+        padding: 3rem 1.5rem;
+    }
+
+    .cta-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .cta-content p {
+        font-size: 1rem;
+    }
+
+    .dev-projects-grid {
+        grid-template-columns: minmax(280px, 1fr);
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card-image,
+    .dashboard-preview {
+        height: 180px;
+    }
+
+    .dev-project-image {
+        height: 200px;
+    }
+
+    .project-tech-stack,
+    .dashboard-tools,
+    .dev-project-tech {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}

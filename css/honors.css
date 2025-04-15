@@ -144,6 +144,92 @@
     border-radius: 20px;
 }
 
+/* 能力总结部分 */
+.honors-summary {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: var(--border-radius);
+    padding: 3rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.honors-summary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 L0,100 Z" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></svg>');
+    opacity: 0.1;
+}
+
+.summary-content {
+    position: relative;
+    z-index: 1;
+}
+
+.honors-summary h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.8rem;
+}
+
+.honors-summary h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 3px;
+    background: var(--accent-color);
+    border-radius: 3px;
+}
+
+.honors-summary p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.skills-highlight {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    transition: var(--transition);
+}
+
+.skill-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+.skill-item i {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+}
+
+.skill-item span {
+    font-weight: 500;
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
     .honors-container {
@@ -166,4 +252,16 @@
     .honor-card {
         padding: 1.5rem;
     }
-} 
+
+    .honors-summary {
+        padding: 2rem;
+    }
+
+    .honors-summary h2 {
+        font-size: 1.8rem;
+    }
+
+    .skills-highlight {
+        grid-template-columns: 1fr;
+    }
+}

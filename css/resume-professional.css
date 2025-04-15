@@ -1,0 +1,487 @@
+/* 专业简历样式 */
+
+/* 导入专业字体 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+/* 基础变量 */
+:root {
+    --resume-primary: #2c3e50;
+    --resume-secondary: #3498db;
+    --resume-accent: #1abc9c;
+    --resume-light: #ecf0f1;
+    --resume-dark: #2c3e50;
+    --resume-text: #333333;
+    --resume-light-text: #7f8c8d;
+    --resume-border: #e0e0e0;
+    --resume-success: #27ae60;
+    --resume-warning: #f39c12;
+    --resume-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --resume-transition: all 0.3s ease;
+    --resume-radius: 8px;
+    --resume-font-main: 'Noto Sans SC', sans-serif;
+    --resume-font-heading: 'Roboto', 'Noto Sans SC', sans-serif;
+}
+
+/* 整体容器样式 */
+.resume-container {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0;
+    background: white;
+    box-shadow: var(--resume-shadow);
+    border-radius: var(--resume-radius);
+    position: relative;
+    overflow: hidden;
+    font-family: var(--resume-font-main);
+    color: var(--resume-text);
+    line-height: 1.6;
+}
+
+/* 简历内容容器 */
+.resume-content {
+    padding: 2.5rem;
+}
+
+/* 下载按钮 */
+.download-resume-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 0.8rem 1.5rem;
+    background: var(--resume-secondary);
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--resume-transition);
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+    height: 48px;
+    box-sizing: border-box;
+}
+
+.download-resume-btn:hover {
+    background: var(--resume-primary);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.download-resume-btn i {
+    font-size: 1rem;
+}
+
+/* 简历顶部装饰 */
+.resume-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(90deg, var(--resume-primary), var(--resume-secondary));
+}
+
+/* 简历头部 */
+.resume-header {
+    background: var(--resume-primary);
+    color: white;
+    padding: 3rem 2.5rem 2.5rem;
+    position: relative;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.resume-header h1 {
+    color: white;
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    font-family: var(--resume-font-heading);
+    text-align: left;
+}
+
+.basic-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.basic-info h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    font-family: var(--resume-font-heading);
+}
+
+.basic-info p {
+    color: var(--resume-light);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 2rem;
+    margin-top: 1.5rem;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.contact-info p {
+    color: var(--resume-light);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.95rem;
+}
+
+.contact-info i {
+    color: var(--resume-secondary);
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
+}
+
+/* 简历部分 */
+.resume-section {
+    margin-bottom: 2.5rem;
+    position: relative;
+    padding: 0 2.5rem;
+}
+
+.resume-section:last-child {
+    margin-bottom: 0;
+}
+
+.resume-section h3 {
+    color: var(--resume-primary);
+    font-size: 1.5rem;
+    margin: 2.5rem 0 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid var(--resume-light);
+    position: relative;
+    display: inline-block;
+    font-family: var(--resume-font-heading);
+    font-weight: 600;
+}
+
+.resume-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 50%;
+    height: 2px;
+    background: var(--resume-secondary);
+}
+
+/* 教育、经验和项目项目 */
+.education-item,
+.experience-item,
+.project-item {
+    margin-bottom: 1.8rem;
+    padding: 1.5rem;
+    background: var(--resume-light);
+    border-radius: var(--resume-radius);
+    transition: var(--resume-transition);
+    border-left: 4px solid var(--resume-secondary);
+}
+
+.education-item:hover,
+.experience-item:hover,
+.project-item:hover {
+    transform: translateX(10px);
+    box-shadow: var(--resume-shadow);
+}
+
+.education-item h4,
+.experience-item h4,
+.project-item h4 {
+    color: var(--resume-primary);
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+    font-family: var(--resume-font-heading);
+}
+
+.job-title {
+    color: var(--resume-secondary);
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.job-period,
+.project-period,
+.project-link {
+    color: var(--resume-light-text);
+    font-style: italic;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.project-link a {
+    color: var(--resume-secondary);
+    text-decoration: none;
+    transition: var(--resume-transition);
+}
+
+.project-link a:hover {
+    color: var(--resume-primary);
+    text-decoration: underline;
+}
+
+/* 技能列表 */
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.skill-category {
+    background: var(--resume-light);
+    padding: 1.5rem;
+    border-radius: var(--resume-radius);
+    transition: var(--resume-transition);
+    border-top: 4px solid var(--resume-accent);
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--resume-shadow);
+}
+
+.skill-category h4 {
+    color: var(--resume-primary);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 1.5rem;
+    font-family: var(--resume-font-heading);
+    font-weight: 600;
+}
+
+.skill-category h4::before {
+    content: '⚡';
+    position: absolute;
+    left: 0;
+    color: var(--resume-accent);
+}
+
+.skill-category ul {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+}
+
+.skill-category li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+    position: relative;
+    color: var(--resume-text);
+    font-size: 0.95rem;
+}
+
+.skill-category li::before {
+    content: "•";
+    color: var(--resume-secondary);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* 工作职责和项目详情 */
+.job-responsibilities,
+.project-details {
+    list-style: none;
+    padding-left: 1.5rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0;
+}
+
+.job-responsibilities li,
+.project-details li {
+    margin-bottom: 0.6rem;
+    position: relative;
+    color: var(--resume-text);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.job-responsibilities li::before,
+.project-details li::before {
+    content: "•";
+    color: var(--resume-secondary);
+    position: absolute;
+    left: -1.5rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 0.7;
+}
+
+/* 证书列表 */
+.certificates-list {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 0;
+}
+
+.certificates-list li {
+    margin-bottom: 0.8rem;
+    padding: 1rem 1.5rem;
+    position: relative;
+    background: var(--resume-light);
+    border-radius: var(--resume-radius);
+    transition: var(--resume-transition);
+    color: var(--resume-text);
+    font-size: 0.95rem;
+    border-left: 4px solid var(--resume-success);
+}
+
+.certificates-list li:hover {
+    transform: translateX(10px);
+    box-shadow: var(--resume-shadow);
+}
+
+.certificates-list li::before {
+    content: "✓";
+    color: var(--resume-success);
+    margin-right: 0.5rem;
+    font-weight: bold;
+}
+
+/* 个人优势列表 */
+.strengths-list {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 0;
+}
+
+.strengths-list li {
+    margin-bottom: 0.8rem;
+    padding: 1rem 1.5rem;
+    position: relative;
+    background: var(--resume-light);
+    border-radius: var(--resume-radius);
+    transition: var(--resume-transition);
+    color: var(--resume-text);
+    font-size: 0.95rem;
+    border-left: 4px solid var(--resume-warning);
+}
+
+.strengths-list li:hover {
+    transform: translateX(10px);
+    box-shadow: var(--resume-shadow);
+}
+
+.strengths-list li::before {
+    content: "★";
+    color: var(--resume-warning);
+    margin-right: 0.5rem;
+    font-weight: bold;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .resume-container {
+        margin: 1rem;
+    }
+
+    .resume-header {
+        padding: 2rem 1.5rem;
+    }
+
+    .resume-content {
+        padding: 1.5rem;
+    }
+
+    .resume-section {
+        padding: 0 1.5rem;
+    }
+
+    .resume-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .basic-info h2 {
+        font-size: 2rem;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .skills-list,
+    .certificates-list,
+    .strengths-list {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-category ul {
+        grid-template-columns: 1fr;
+    }
+
+    .download-resume-btn {
+        top: 10px;
+        right: 10px;
+        padding: 0.6rem 1.2rem;
+        font-size: 0.8rem;
+        height: 40px;
+    }
+}
+
+/* 打印样式 */
+@media print {
+    body {
+        background: white;
+    }
+
+    .resume-container {
+        box-shadow: none;
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .download-resume-btn {
+        display: none;
+    }
+
+    .resume-header {
+        padding: 2rem 1.5rem;
+    }
+
+    .resume-section {
+        page-break-inside: avoid;
+    }
+
+    .education-item,
+    .experience-item,
+    .project-item,
+    .skill-category,
+    .certificates-list li,
+    .strengths-list li {
+        box-shadow: none;
+        page-break-inside: avoid;
+    }
+}

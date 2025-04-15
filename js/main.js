@@ -118,7 +118,7 @@ function downloadResume() {
     const link = document.createElement('a');
 
     // 设置链接属性（使用实际的PDF文件路径）
-    link.href = '庄春萌简历 .pdf';
+    link.href = 'assets/庄春萌简历.pdf';
     link.download = '庄春萌简历.pdf';
 
     // 将链接添加到文档中
@@ -135,10 +135,41 @@ function downloadResume() {
     const originalText = downloadBtn.innerHTML;
 
     downloadBtn.innerHTML = '<i class="fas fa-check"></i> 下载成功';
-    downloadBtn.style.backgroundColor = 'var(--success-color)';
+    downloadBtn.style.backgroundColor = 'var(--resume-success)';
 
+    // 创建一个浮动提示框
+    const tooltip = document.createElement('div');
+    tooltip.textContent = '简历已下载到您的设备';
+    tooltip.style.cssText = `
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--resume-success);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 4px;
+        font-size: 14px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        z-index: 1000;
+        opacity: 0;
+        transition: opacity 0.3s, transform 0.3s;
+    `;
+
+    document.body.appendChild(tooltip);
+
+    // 显示提示框
+    setTimeout(() => {
+        tooltip.style.opacity = '1';
+        tooltip.style.transform = 'translateX(-50%) translateY(10px)';
+    }, 100);
+
+    // 恢复按钮原样式并移除提示框
     setTimeout(() => {
         downloadBtn.innerHTML = originalText;
         downloadBtn.style.backgroundColor = '';
+        tooltip.style.opacity = '0';
+        tooltip.style.transform = 'translateX(-50%) translateY(0)';
+        setTimeout(() => tooltip.remove(), 300);
     }, 2000);
 }

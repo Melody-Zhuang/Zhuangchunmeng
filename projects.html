@@ -11,18 +11,20 @@
     <link rel="stylesheet" href="css/dashboards.css">
     <link rel="stylesheet" href="css/development.css">
     <link rel="stylesheet" href="css/filter.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/projects-layout.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body class="projects-page">
     <header>
         <nav class="navbar">
             <div class="logo">庄春萌 | Zhuang Chunmeng</div>
             <ul class="nav-links">
                 <li><a href="index.html">首页</a></li>
-                <li><a href="resume.html">简历</a></li>
                 <li><a href="projects.html" class="active">项目展示</a></li>
-                <li><a href="honors.html">个人荣誉</a></li>
+                <li><a href="resume.html">简历</a></li>
                 <li><a href="skills.html">个人优势</a></li>
+                <li><a href="honors.html">个人荣誉</a></li>
             </ul>
         </nav>
     </header>
@@ -41,20 +43,20 @@
                     <h2>筛选项目 <span class="accent">Filter Projects</span></h2>
 
                     <div class="filter-categories">
-                        <div class="filter-category" id="main-filter-category">
-                            <h3>数据分析项目</h3>
-                            <div class="filter-buttons">
-                                <button class="filter-btn" data-filter="data-analysis" type="button">数据分析</button>
-                                <button class="filter-btn" data-filter="operations" type="button">业务运营</button>
-                                <button class="filter-btn" data-filter="optimization" type="button">流程优化</button>
-                                <button class="filter-btn dashboard-btn" data-filter="dashboard" type="button">数据看板</button>
+                        <div class="filter-row">
+                            <div class="filter-category" id="data-analysis-category">
+                                <h3>数据分析项目</h3>
+                                <div class="filter-buttons">
+                                    <button class="filter-btn data-analysis-btn" data-filter="data-analysis" type="button"><i class="fas fa-chart-pie"></i> 数据分析</button>
+                                    <button class="filter-btn dashboard-btn" data-filter="dashboard" type="button"><i class="fas fa-chart-bar"></i> 数据看板</button>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="filter-category">
-                            <h3>开发项目</h3>
-                            <div class="filter-buttons">
-                                <button class="filter-btn" data-filter="development" type="button">开发项目</button>
+                            <div class="filter-category" id="development-category">
+                                <h3>开发项目</h3>
+                                <div class="filter-buttons">
+                                    <button class="filter-btn development-btn" data-filter="development" type="button"><i class="fas fa-code"></i> 开发项目</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -64,7 +66,9 @@
 
         <section class="projects-grid-section">
             <div class="container">
-                <h2>项目案例 <span class="accent">Project Gallery</span></h2>
+                <div class="section-title">
+                    <h2>项目案例 <span class="accent">Project Gallery</span></h2>
+                </div>
                 <div class="projects-grid">
                     <!-- 巴西电商项目卡片 -->
                     <div class="project-card" data-category="dashboard">
@@ -95,43 +99,13 @@
                                 </div>
                             </div>
                             <div class="project-links">
-                                <a href="https://s.shutu.cn/w/1r7kqy" target="_blank" rel="noopener noreferrer" class="btn secondary-btn">思维导图</a>
-                                <a href="https://pcdemo.finebi.com/webroot/decision/link/HG00" target="_blank" rel="noopener noreferrer" class="btn primary-btn">查看看板</a>
+                                <a href="https://s.shutu.cn/w/1r7kqy" target="_blank" rel="noopener noreferrer" class="btn secondary-btn"><i class="fas fa-sitemap"></i> 思维导图</a>
+                                <a href="https://pcdemo.finebi.com/webroot/decision/link/HG00" target="_blank" rel="noopener noreferrer" class="btn primary-btn"><i class="fas fa-chart-bar"></i> 查看看板</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- 项目卡片1 -->
-                    <div class="project-card" data-category="dashboard" id="platform">
-                        <div class="project-card-image">
-                            <img src="images/project2.jpg" alt="业务运营数据分析平台">
-                            <div class="project-category">数据看板</div>
-                        </div>
-                        <div class="project-card-content">
-                            <h3>业务运营数据分析平台</h3>
-                            <div class="project-tech-stack">
-                                <span class="tech-tag">Power BI</span>
-                                <span class="tech-tag">SQL</span>
-                                <span class="tech-tag">DAX</span>
-                            </div>
-                            <p>设计并实现业务运营数据分析平台，整合多个数据源，提供实时数据监控和分析功能</p>
-                            <div class="project-highlights">
-                                <div class="highlight-item">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>整合7个数据源</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>构建15+分析看板</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>决策效率提升40%</span>
-                                </div>
-                            </div>
-                            <a href="#" class="btn outline-btn view-project-btn">查看详情</a>
-                        </div>
-                    </div>
+
 
                     <!-- 中老铁路舆情分析项目 -->
                     <div class="project-card" data-category="data-analysis">
@@ -162,47 +136,17 @@
                                 </div>
                             </div>
                             <div class="project-links">
-                                <a href="https://1drv.ms/w/c/4f657799972775f4/EYkvRtl99iNIq2BtRwcYh0oBVpCDthnvt3qPZxq7HTS31g?e=IfrNIR" target="_blank" rel="noopener noreferrer" class="btn primary-btn">查看报告</a>
+                                <a href="https://1drv.ms/w/c/4f657799972775f4/EYkvRtl99iNIq2BtRwcYh0oBVpCDthnvt3qPZxq7HTS31g?e=IfrNIR" target="_blank" rel="noopener noreferrer" class="btn primary-btn"><i class="fas fa-file-alt"></i> 查看报告</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- 项目卡片3 -->
-                    <div class="project-card" data-category="data-analysis">
-                        <div class="project-card-image">
-                            <img src="images/data-analysis.jpg" alt="数据分析师的自我修养">
-                            <div class="project-category">数据分析</div>
-                        </div>
-                        <div class="project-card-content">
-                            <h3>数据分析师的自我修养</h3>
-                            <div class="project-tech-stack">
-                                <span class="tech-tag">数据分析</span>
-                                <span class="tech-tag">数据可视化</span>
-                                <span class="tech-tag">商业智能</span>
-                            </div>
-                            <p>深入探讨数据分析师的核心技能、工作流程和职业发展路径，为数据分析领域的学习者和从业者提供全面的指导</p>
-                            <div class="project-highlights">
-                                <div class="highlight-item">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>数据分析全流程讲解</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>实用工具与方法论</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>职业发展路径规划</span>
-                                </div>
-                            </div>
-                            <a href="https://1drv.ms/p/c/4f657799972775f4/EQeuHHDYR31Gpl0ha0gwlRwBTrjotf4Fg-3bwXS5A5D8FA" target="_blank" rel="noopener noreferrer" class="btn primary-btn">查看项目</a>
-                        </div>
-                    </div>
+
 
                     <!-- 酒店预订项目卡片 -->
                     <div class="project-card" data-category="data-analysis">
                         <div class="project-card-image">
-                            <img src="images/project5.jpg" alt="酒店预订取消分析">
+                            <img src="images/hotel-booking.jpg" alt="酒店预订取消分析">
                             <div class="project-category">数据分析</div>
                         </div>
                         <div class="project-card-content">
@@ -211,13 +155,12 @@
                                 <span class="tech-tag">Python</span>
                                 <span class="tech-tag">Pandas</span>
                                 <span class="tech-tag">Matplotlib</span>
-                                <span class="tech-tag">机器学习</span>
                             </div>
-                            <p>分析酒店预订数据，找出影响客户取消预订的关键因素，并建立预测模型，帮助酒店运营团队优化收益管理策略</p>
+                            <p>分析酒店预订数据，找出影响客户取消预订的关键因素，并建立数据模型，帮助酒店运营团队优化收益管理策略</p>
                             <div class="project-highlights">
                                 <div class="highlight-item">
                                     <i class="fas fa-check-circle"></i>
-                                    <span>预测准确率达85%</span>
+                                    <span>数据分析准确率达85%</span>
                                 </div>
                                 <div class="highlight-item">
                                     <i class="fas fa-check-circle"></i>
@@ -228,41 +171,13 @@
                                     <span>潜在收益提升20%</span>
                                 </div>
                             </div>
-                            <a href="https://www.kaggle.com/code/melodyzhuang/hotel-cancellation-analysis/notebook" target="_blank" rel="noopener noreferrer" class="btn primary-btn">查看Kaggle项目</a>
+                            <div class="project-links">
+                                <a href="https://www.kaggle.com/code/melodyzhuang/hotel-cancellation-analysis/notebook" target="_blank" rel="noopener noreferrer" class="btn primary-btn"><i class="fas fa-code"></i> 查看Kaggle项目</a>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- 项目卡片6 -->
-                    <div class="project-card" data-category="operations">
-                        <div class="project-card-image">
-                            <img src="images/project7.jpg" alt="客户分层与精准营销">
-                            <div class="project-category">业务运营</div>
-                        </div>
-                        <div class="project-card-content">
-                            <h3>客户分层与精准营销</h3>
-                            <div class="project-tech-stack">
-                                <span class="tech-tag">RFM模型</span>
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">SQL</span>
-                            </div>
-                            <p>基于用户行为和交易数据，构建客户分层模型，实现精准营销和个性化服务</p>
-                            <div class="project-highlights">
-                                <div class="highlight-item">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>高价值客户留存率提升32%</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>营销转化率提升28%</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>客户满意度提升15%</span>
-                                </div>
-                            </div>
-                            <a href="#" class="btn outline-btn view-project-btn">查看详情</a>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </section>
@@ -272,128 +187,7 @@
                 <div class="cta-content">
                     <h2>想了解更多项目细节？</h2>
                     <p>如果您对我的项目经历和解决方案感兴趣，欢迎与我联系，我可以提供更详细的项目文档和技术说明。</p>
-                    <a href="mailto:Zhuangchunmeng12@163.com" class="btn primary-btn">联系我</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- 开发项目部分 -->
-        <section class="development-section" id="development">
-            <div class="container">
-                <h2>开发项目展示 <span class="accent">Development Projects</span></h2>
-                <div class="section-intro">
-                    <p>以下是我与AI协作完成的开发项目。通过与AI的合作，我能够快速实现创意、提高开发效率并保证代码质量。这些项目展示了我在软件开发、用户界面设计和问题解决方面的能力。</p>
-                </div>
-
-                <div class="dev-projects-grid">
-                    <!-- 母语级翻译小程序 -->
-                    <div class="dev-project-card" data-category="development">
-                        <div class="dev-project-image">
-                            <img src="images/dev-project1.jpg" alt="母语级翻译小程序">
-                            <div class="dev-project-badge">AI协作</div>
-                        </div>
-                        <div class="dev-project-content">
-                            <h3>母语级翻译小程序</h3>
-                            <div class="dev-project-tech">
-                                <span class="tech-tag">WeChat Mini Program</span>
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">AI API</span>
-                            </div>
-                            <p>基于大语言模型的母语级翻译小程序，支持多种语言互译、专业术语翻译和语言风格调整</p>
-                            <div class="dev-project-highlights">
-                                <div class="highlight-item">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>支持50+种语言互译</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>专业领域翻译功能</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>用户满意度达95%</span>
-                                </div>
-                            </div>
-                            <div class="dev-project-links">
-                                <a href="#" class="btn secondary-btn">查看代码</a>
-                                <a href="#" class="btn primary-btn">体验小程序</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 个人财务管理应用 -->
-                    <div class="dev-project-card" data-category="development">
-                        <div class="dev-project-image">
-                            <img src="images/dev-project2.jpg" alt="个人财务管理应用">
-                            <div class="dev-project-badge">AI协作</div>
-                        </div>
-                        <div class="dev-project-content">
-                            <h3>个人财务管理应用</h3>
-                            <div class="dev-project-tech">
-                                <span class="tech-tag">React Native</span>
-                                <span class="tech-tag">Firebase</span>
-                                <span class="tech-tag">Chart.js</span>
-                            </div>
-                            <p>一款简洁高效的个人财务管理应用，帮助用户追踪支出、设置预算并分析消费习惯</p>
-                            <div class="dev-project-highlights">
-                                <div class="highlight-item">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>自动分类交易功能</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>可视化支出分析</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>智能预算建议</span>
-                                </div>
-                            </div>
-                            <div class="dev-project-links">
-                                <a href="#" class="btn secondary-btn">查看代码</a>
-                                <a href="#" class="btn primary-btn">下载应用</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 智能学习助手 -->
-                    <div class="dev-project-card" data-category="development">
-                        <div class="dev-project-image">
-                            <img src="images/dev-project3.jpg" alt="智能学习助手">
-                            <div class="dev-project-badge">AI协作</div>
-                        </div>
-                        <div class="dev-project-content">
-                            <h3>智能学习助手</h3>
-                            <div class="dev-project-tech">
-                                <span class="tech-tag">Vue.js</span>
-                                <span class="tech-tag">Node.js</span>
-                                <span class="tech-tag">MongoDB</span>
-                            </div>
-                            <p>一个基于AI的学习辅助平台，提供个性化学习计划、智能笔记和知识图谱生成功能</p>
-                            <div class="dev-project-highlights">
-                                <div class="highlight-item">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>自适应学习路径</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>智能问答系统</span>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>记忆曲线优化</span>
-                                </div>
-                            </div>
-                            <div class="dev-project-links">
-                                <a href="#" class="btn secondary-btn">查看代码</a>
-                                <a href="#" class="btn primary-btn">访问网站</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="view-more-projects">
-                    <a href="#" class="btn outline-btn">查看更多开发项目 <i class="fas fa-arrow-right"></i></a>
+                    <a href="mailto:Zhuangchunmeng12@163.com" class="btn primary-btn"><i class="fas fa-envelope"></i> 联系我</a>
                 </div>
             </div>
         </section>
@@ -401,7 +195,9 @@
         <!-- 看板展示部分 -->
         <section class="dashboards-section" id="dashboards">
             <div class="container">
-                <h2>数据看板展示 <span class="accent">Data Dashboards</span></h2>
+                <div class="section-title">
+                    <h2>数据看板展示 <span class="accent">Data Dashboards</span></h2>
+                </div>
                 <div class="section-intro">
                     <p>我制作了超过10个专业数据看板，涵盖销售分析、运营监控、客户洞察等多个领域。以下是部分代表作品，展示我在数据可视化和业务分析方面的能力。</p>
                 </div>
@@ -410,9 +206,9 @@
                     <!-- 保健品监控看板 -->
                     <div class="dashboard-card" data-category="dashboard">
                         <div class="dashboard-preview">
-                            <img src="images/health-product-dashboard.jpg" alt="保健品监控看板">
+                            <img src="images/data-analytics.jpg" alt="保健品监控看板">
                             <div class="dashboard-overlay">
-                                <a href="https://pcdemo.finebi.com/webroot/decision/link/xLxr" target="_blank" rel="noopener noreferrer" class="view-dashboard-btn">查看看板</a>
+                                <a href="https://pcdemo.finebi.com/webroot/decision/link/xLxr" target="_blank" rel="noopener noreferrer" class="view-dashboard-btn"><i class="fas fa-chart-bar"></i> 查看看板</a>
                             </div>
                         </div>
                         <div class="dashboard-info">
@@ -443,9 +239,9 @@
                     <!-- 电商监控看板 -->
                     <div class="dashboard-card" data-category="dashboard">
                         <div class="dashboard-preview">
-                            <img src="images/ecommerce-monitor-dashboard.jpg" alt="电商监控看板">
+                            <img src="images/ecommerce-dashboard.jpg" alt="电商监控看板">
                             <div class="dashboard-overlay">
-                                <a href="https://pcdemo.finebi.com/webroot/decision/link/Tg9i" target="_blank" rel="noopener noreferrer" class="view-dashboard-btn">查看看板</a>
+                                <a href="https://pcdemo.finebi.com/webroot/decision/link/Tg9i" target="_blank" rel="noopener noreferrer" class="view-dashboard-btn"><i class="fas fa-chart-bar"></i> 查看看板</a>
                             </div>
                         </div>
                         <div class="dashboard-info">
@@ -472,82 +268,50 @@
                         </div>
                     </div>
 
-                    <!-- 看板卡片3 -->
-                    <div class="dashboard-card" data-category="dashboard">
-                        <div class="dashboard-preview">
-                            <img src="images/dashboard3.jpg" alt="客户画像分析看板">
-                            <div class="dashboard-overlay">
-                                <a href="https://pcdemo.finebi.com/webroot/decision/link/HG00" target="_blank" rel="noopener noreferrer" class="view-dashboard-btn">查看看板</a>
-                            </div>
-                        </div>
-                        <div class="dashboard-info">
-                            <h3>客户画像分析看板</h3>
-                            <div class="dashboard-tools">
-                                <span class="tool-tag">FineBI</span>
-                            </div>
-                            <p>多维度分析客户特征、行为模式和价值分布，支持精准营销</p>
-                        </div>
-                    </div>
 
-                    <!-- 看板卡片4 -->
-                    <div class="dashboard-card" data-category="dashboard">
-                        <div class="dashboard-preview">
-                            <img src="images/dashboard4.jpg" alt="库存管理看板">
-                            <div class="dashboard-overlay">
-                                <a href="https://pcdemo.finebi.com/webroot/decision/link/xLxr" target="_blank" rel="noopener noreferrer" class="view-dashboard-btn">查看看板</a>
-                            </div>
-                        </div>
-                        <div class="dashboard-info">
-                            <h3>库存管理看板</h3>
-                            <div class="dashboard-tools">
-                                <span class="tool-tag">Power BI</span>
-                            </div>
-                            <p>监控库存水平、周转率和补货需求，降低库存成本并避免缺货</p>
-                        </div>
-                    </div>
+
+
                 </div>
 
                 <div class="dashboards-grid second-row">
-                    <!-- 看板卡片5 -->
+                    <!-- 巴西电商业务分析看板 -->
                     <div class="dashboard-card" data-category="dashboard">
                         <div class="dashboard-preview">
-                            <img src="images/dashboard5.jpg" alt="营销渠道分析看板">
+                            <img src="images/ecommerce-dashboard.jpg" alt="巴西电商业务分析看板">
                             <div class="dashboard-overlay">
-                                <a href="https://pcdemo.finebi.com/webroot/decision/link/xLxr" target="_blank" rel="noopener noreferrer" class="view-dashboard-btn">查看看板</a>
+                                <a href="https://pcdemo.finebi.com/webroot/decision/link/HG00" target="_blank" rel="noopener noreferrer" class="view-dashboard-btn"><i class="fas fa-chart-bar"></i> 查看看板</a>
                             </div>
                         </div>
                         <div class="dashboard-info">
-                            <h3>营销渠道分析看板</h3>
+                            <h3>巴西电商业务分析看板</h3>
                             <div class="dashboard-tools">
-                                <span class="tool-tag">Tableau</span>
+                                <span class="tool-tag">FineBI</span>
+                                <span class="tool-tag">多维度分析</span>
                             </div>
-                            <p>分析各营销渠道的投入产出比和转化效果，优化营销资源分配</p>
-                        </div>
-                    </div>
-
-                    <!-- 看板卡片6 -->
-                    <div class="dashboard-card" data-category="dashboard">
-                        <div class="dashboard-preview">
-                            <img src="images/dashboard6.jpg" alt="人力资源分析看板">
-                            <div class="dashboard-overlay">
-                                <a href="https://pcdemo.finebi.com/webroot/decision/link/xLxr" target="_blank" rel="noopener noreferrer" class="view-dashboard-btn">查看看板</a>
+                            <p>基于巴西电商平台真实数据，创建全面的电商经营分析看板，帮助管理层洞察销售趋势、顾客行为和市场机会</p>
+                            <div class="dashboard-highlights">
+                                <div class="highlight-item">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>多维度数据分析与可视化</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>客户行为与地理分布分析</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-percentage"></i>
+                                    <span>销售趋势与季节性波动分析</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="dashboard-info">
-                            <h3>人力资源分析看板</h3>
-                            <div class="dashboard-tools">
-                                <span class="tool-tag">Power BI</span>
-                            </div>
-                            <p>分析员工绩效、流失率和满意度，支持人力资源策略决策</p>
                         </div>
                     </div>
 
                     <!-- 零售行业财务分析看板 -->
                     <div class="dashboard-card" data-category="dashboard">
                         <div class="dashboard-preview">
-                            <img src="images/retail-finance-dashboard.jpg" alt="零售行业财务分析看板">
+                            <img src="images/retail-finance.jpg" alt="零售行业财务分析看板">
                             <div class="dashboard-overlay">
-                                <a href="https://pcdemo.finebi.com/webroot/decision/link/Es06" target="_blank" rel="noopener noreferrer" class="view-dashboard-btn">查看看板</a>
+                                <a href="https://pcdemo.finebi.com/webroot/decision/link/Es06" target="_blank" rel="noopener noreferrer" class="view-dashboard-btn"><i class="fas fa-chart-bar"></i> 查看看板</a>
                             </div>
                         </div>
                         <div class="dashboard-info">
@@ -574,27 +338,63 @@
                         </div>
                     </div>
 
-                    <!-- 看板卡片8 -->
-                    <div class="dashboard-card" data-category="dashboard">
-                        <div class="dashboard-preview">
-                            <img src="images/dashboard8.jpg" alt="电商平台分析看板">
-                            <div class="dashboard-overlay">
-                                <a href="https://pcdemo.finebi.com/webroot/decision/link/xLxr" target="_blank" rel="noopener noreferrer" class="view-dashboard-btn">查看看板</a>
-                            </div>
-                        </div>
-                        <div class="dashboard-info">
-                            <h3>电商平台分析看板</h3>
-                            <div class="dashboard-tools">
-                                <span class="tool-tag">Tableau</span>
-                            </div>
-                            <p>分析电商平台的访问量、转化率和客单价值，优化用户体验</p>
-                        </div>
-                    </div>
+
                 </div>
 
-                <div class="view-more-dashboards">
-                    <a href="https://pcdemo.finebi.com/webroot/decision/link/xLxr" target="_blank" rel="noopener noreferrer" class="btn primary-btn">查看更多看板 <i class="fas fa-arrow-right"></i></a>
+
+            </div>
+        </section>
+
+        <!-- 开发项目部分 -->
+        <section class="development-section" id="development">
+            <div class="container">
+                <div class="section-title">
+                    <h2>开发项目展示 <span class="accent">Development Projects</span></h2>
                 </div>
+                <div class="section-intro">
+                    <p>以下是我与AI协作完成的开发项目。通过与AI的合作，我能够快速实现创意、提高开发效率并保证代码质量。该项目展示了我在软件开发、用户界面设计和问题解决方面的能力。</p>
+                </div>
+
+                <div class="dev-projects-grid">
+                    <!-- 母语级翻译小程序 -->
+                    <div class="dev-project-card" data-category="development">
+                        <div class="dev-project-image">
+                            <img src="images/translation-app.jpg" alt="母语级翻译小程序">
+                            <div class="dev-project-badge">AI协作</div>
+                        </div>
+                        <div class="dev-project-content">
+                            <h3>母语级翻译小程序</h3>
+                            <div class="dev-project-tech">
+                                <span class="tech-tag">WeChat Mini Program</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">AI API</span>
+                            </div>
+                            <p>基于大语言模型的母语级翻译小程序，支持多种语言互译、专业术语翻译和语言风格调整</p>
+                            <div class="dev-project-highlights">
+                                <div class="highlight-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>支持50+种语言互译</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>专业领域翻译功能</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>用户满意度达95%</span>
+                                </div>
+                            </div>
+                            <div class="dev-project-links">
+                                <a href="#" class="btn secondary-btn"><i class="fas fa-code"></i> 查看代码</a>
+                                <a href="#" class="btn primary-btn"><i class="fas fa-mobile-alt"></i> 体验小程序</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
             </div>
         </section>
     </main>
@@ -610,10 +410,10 @@
                     <h4>导航</h4>
                     <ul>
                         <li><a href="index.html">首页</a></li>
-                        <li><a href="resume.html">简历</a></li>
                         <li><a href="projects.html">项目展示</a></li>
-                        <li><a href="honors.html">个人荣誉</a></li>
+                        <li><a href="resume.html">简历</a></li>
                         <li><a href="skills.html">个人优势</a></li>
+                        <li><a href="honors.html">个人荣誉</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
@@ -680,26 +480,27 @@
                         }
                     });
 
+                    // 筛选看板部分
+                    if (filterValue === 'dashboard') {
+                        dashboardsSection.style.display = 'block';
+                        developmentSection.style.display = 'none';
+                        // 如果选择了看板类别，滚动到看板部分
+                        setTimeout(() => {
+                            dashboardsSection.scrollIntoView({ behavior: 'smooth' });
+                        }, 100);
+                    }
                     // 筛选开发项目部分
-                    if (filterValue === 'development') {
+                    else if (filterValue === 'development') {
+                        dashboardsSection.style.display = 'none';
                         developmentSection.style.display = 'block';
                         // 如果选择了开发项目类别，滚动到开发项目部分
                         setTimeout(() => {
                             developmentSection.scrollIntoView({ behavior: 'smooth' });
                         }, 100);
-                        dashboardsSection.style.display = 'none';
-                    } else if (filterValue === 'dashboard') {
-                        // 筛选看板部分
-                        dashboardsSection.style.display = 'block';
-                        // 如果选择了看板类别，滚动到看板部分
-                        setTimeout(() => {
-                            dashboardsSection.scrollIntoView({ behavior: 'smooth' });
-                        }, 100);
-                        developmentSection.style.display = 'none';
                     } else {
                         // 其他数据分析类别，显示数据分析项目，隐藏开发项目和看板部分
-                        developmentSection.style.display = 'none';
                         dashboardsSection.style.display = 'none';
+                        developmentSection.style.display = 'none';
                     }
                 });
             });

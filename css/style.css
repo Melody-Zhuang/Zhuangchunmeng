@@ -184,6 +184,7 @@ main {
     font-size: 1.4rem;
     margin-bottom: 2rem;
     opacity: 0.9;
+    font-weight: 400;
 }
 
 .hero-buttons {
@@ -445,6 +446,11 @@ main {
 .expertise-list i {
     font-size: 1.5rem;
     color: var(--primary-color);
+}
+
+/* 不换行文本 */
+.nowrap {
+    white-space: nowrap;
 }
 
 /* 核心技能部分 */
@@ -776,15 +782,18 @@ footer p {
 .page-header {
     background: var(--gradient);
     color: white;
-    padding: 5rem 2rem 3rem;
+    padding: 4rem 2rem;
     text-align: center;
     margin-bottom: 3rem;
     border-radius: var(--border-radius);
 }
 
 .page-header h1 {
-    font-size: 2.8rem;
-    margin-bottom: 1rem;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.2;
 }
 
 .container {
@@ -798,35 +807,33 @@ footer p {
     flex-wrap: wrap;
     gap: 2rem;
     margin: 2rem 0 3rem;
-    background: var(--card-bg);
-    padding: 2rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
 }
 
 .radar-chart-wrapper {
     flex: 1;
-    min-width: 300px;
-    height: 350px;
+    min-width: 400px;
+    height: 450px;
 }
 
 .skills-summary {
     flex: 1;
-    min-width: 300px;
+    min-width: 350px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
+    justify-content: space-between;
+    gap: 0.8rem;
+    height: 450px;
 }
 
 .skills-summary p {
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding: 0.8rem 1.2rem;
+    padding: 0.7rem 1.2rem;
     background: rgba(67, 97, 238, 0.05);
     border-radius: 8px;
     border-left: 4px solid var(--primary-color);
+    margin: 0;
 }
 
 .skills-summary p i {
@@ -1031,15 +1038,15 @@ footer p {
     .skill-category-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .business-skills-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .certificates-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .radar-chart-wrapper {
         width: 100%;
     }
@@ -1342,20 +1349,20 @@ footer p {
     .filter-buttons {
         gap: 0.5rem;
     }
-    
+
     .filter-btn {
         padding: 0.5rem 1rem;
         font-size: 0.85rem;
     }
-    
+
     .featured-project-content {
         padding: 1.5rem;
     }
-    
+
     .featured-project-content h2 {
         font-size: 1.6rem;
     }
-    
+
     .projects-grid {
         grid-template-columns: 1fr;
     }
