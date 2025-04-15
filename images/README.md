@@ -22,12 +22,12 @@
 
 # 数据看板图片
 16. `health-product-dashboard.jpg` - 保健品监控看板
-17. `dashboard2.jpg` - 运营KPI监控看板
+17. `ecommerce-monitor-dashboard.jpg` - 电商监控看板
 18. `dashboard3.jpg` - 客户画像分析看板
 19. `dashboard4.jpg` - 库存管理看板
 20. `dashboard5.jpg` - 营销渠道分析看板
 21. `dashboard6.jpg` - 人力资源分析看板
-22. `dashboard7.jpg` - 财务分析看板
+22. `retail-finance-dashboard.jpg` - 零售行业财务分析看板
 23. `dashboard8.jpg` - 电商平台分析看板
 
 请将相应的图片文件放置在此文件夹中。
