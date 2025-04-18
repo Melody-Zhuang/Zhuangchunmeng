@@ -1591,3 +1591,16 @@ footer p {
     width: 100%;
     margin-top: 1.5rem;
 }
+
+/* 看板网格样式 */
+.dashboards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.dashboards-grid.second-row,
+.dashboards-grid.third-row {
+    margin-top: 2rem;
+}
