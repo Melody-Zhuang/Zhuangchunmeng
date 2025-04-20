@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>翻译工作流详解 - 庄春萌个人网站</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/development.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .workflow-page {
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .workflow-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .workflow-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .workflow-header p {
+            font-size: 1.1rem;
+            color: var(--light-text);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .workflow-section {
+            margin-bottom: 4rem;
+        }
+        
+        .workflow-section h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .workflow-section h2:after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 0.8rem auto 0;
+        }
+        
+        .diagram-container {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            overflow: auto;
+            max-height: 80vh;
+            margin-bottom: 2rem;
+        }
+        
+        .diagram-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .diagram-description {
+            padding: 1.5rem;
+            background-color: #f8f9fa;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+        }
+        
+        .diagram-description h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+        
+        .diagram-description p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        
+        .diagram-description ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .diagram-description li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .workflow-summary {
+            background-color: #f0f7ff;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin-top: 2rem;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .workflow-summary h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .workflow-summary p {
+            line-height: 1.6;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        .diagram-tip {
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+            color: #666;
+            font-style: italic;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">庄春萌 | Zhuang Chunmeng</a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="projects.html" class="active">项目展示</a></li>
+                    <li><a href="resume.html">简历</a></li>
+                    <li><a href="skills.html">个人优势</a></li>
+                    <li><a href="honors.html">个人荣誉</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="workflow-page">
+            <div class="workflow-header">
+                <h1>母语级翻译工作流详解</h1>
+                <p>基于"反思框架"的"三次翻译、两次建议、一次修改"翻译工作流，确保翻译质量达到母语水平</p>
+            </div>
+            
+            <div class="workflow-section">
+                <h2>工作流概述</h2>
+                <div class="diagram-description">
+                    <p>母语级翻译小程序采用了基于"反思框架"的工作流设计，通过"三次翻译、两次建议、一次修改"的核心模式，确保翻译质量达到母语水平。这个工作流充分利用了Coze平台的能力，通过多轮处理和优化，实现了高质量的翻译效果。</p>
+                    
+                    <p>整个工作流程可以分为三个主要阶段：</p>
+                    <ol>
+                        <li><strong>三次翻译</strong>：包括初步翻译（语言解构和重构）、语言润色和语言合并</li>
+                        <li><strong>两次建议</strong>：包括核心意思替换建议和专业翻译审校建议</li>
+                        <li><strong>一次修改</strong>：基于前两步的建议进行最终完善</li>
+                    </ol>
+                    
+                    <p>下面通过思维导图和流程图详细展示这个工作流的设计思路和实现过程。</p>
+                </div>
+            </div>
+            
+            <div class="workflow-section">
+                <h2>翻译工作流思维导图</h2>
+                <div class="diagram-container">
+                    <img src="images/工作流设计思维导图.png" alt="翻译工作流思维导图">
+                    <div class="diagram-tip">提示：可以使用鼠标滚轮或拖动来查看图片的不同部分</div>
+                </div>
+            </div>
+            
+            <div class="workflow-section">
+                <h2>翻译工作流程图</h2>
+                <div class="diagram-container">
+                    <img src="images/翻译工作流流程图.png" alt="翻译工作流程图">
+                    <div class="diagram-tip">提示：可以使用鼠标滚轮或拖动来查看图片的不同部分</div>
+                </div>
+            </div>
+            
+            <div class="workflow-summary">
+                <h3>工作流程详细解释</h3>
+                <p><strong>第一次翻译：初步翻译</strong><br>
+                初步翻译又分为两部分，分别为语言解构和语言重构。这部分工作流节点扮演的角色是语言学家。<br>
+                1. <strong>语言解构</strong>：让语言学家将语言拆解为最小意思单位，即从语言学的角度拆解原文，根据意思把原文打散。举个形象的例子，假设原文是积木搭建的城堡，而译文是积木搭建的宫殿，要传达的意义即积木本身，语言拆解即将城堡打散，形成一个一个的积木。<br>
+                2. <strong>语言重构</strong>：让语言学家再用译入语的语言习惯把最小意思单位重组，即按照搭建宫殿的方式排列积木，最终形成宫殿，也就是译文，此举可从很大程度上降低原文结构对译文的影响。经过语言解构再重构过程的目的是最大程度减少原文对译文的结构化影响。重构后的结果即为初始译文。</p>
+                
+                <p><strong>第二次翻译：语言润色</strong><br>
+                译入语的专业作家，把重组后的译文看作一篇普通译入语文章，对该文章进行润色，修改语言，保证译文语言的地道和母语化。此节点完成第二次翻译。</p>
+                
+                <p><strong>第三次翻译：语言合并</strong><br>
+                AI翻译一大缺点便是不能将原文意思进行整合，常保留重复性话语，语言合并指在语言表达中，将多个相关的内容或信息进行整合，以提高表达的简洁性和连贯性。在该节点，语言专家对润色好的译文进行语义合并，语言优化，确保没有冗余表达。此节点完成第三次翻译。</p>
+                
+                <p><strong>两次建议</strong><br>
+                提出修改建议环节分为两部分，即"两次建议"：分别为核心意思替换建议和翻译审校建议。<br>
+                1. <strong>第一次建议：核心意思替换建议</strong>：详细分析原文，分析原文中的核心表达是否地道或适用于语境，提出表达替换建议。<br>
+                2. <strong>第二次建议：专业翻译审校建议</strong>：设置专业译审节点，从对多个维度对翻译质量进行审核，输出译文质量提高建议。</p>
+                
+                <p><strong>一次修改</strong><br>
+                这一步即"一次修改"，设计专业翻译家角色，使其能基于第二步的修改建议，即核心意思替换建议，和专业翻译审校提出的翻译修改建议，对译文进行修改，确保翻译质量。</p>
+            </div>
+            
+            <a href="projects.html#development" class="back-btn"><i class="fas fa-arrow-left"></i> 返回项目页面</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>庄春萌 | Zhuang Chunmeng</h3>
+                <p>数据分析爱好者 / 英语翻译专业背景</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-nav">
+                    <h4>导航</h4>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="projects.html">项目展示</a></li>
+                        <li><a href="resume.html">简历</a></li>
+                        <li><a href="skills.html">个人优势</a></li>
+                        <li><a href="honors.html">个人荣誉</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>联系方式</h4>
+                    <p><i class="fas fa-envelope"></i> Zhuangchunmeng12@163.com</p>
+                    <p><i class="fas fa-phone"></i> 138-6353-3037</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 庄春萌个人网站. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

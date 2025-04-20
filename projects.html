@@ -432,7 +432,13 @@
                                 <span class="tech-tag">JavaScript</span>
                                 <span class="tech-tag">AI API</span>
                             </div>
-                            <p>基于大语言模型的母语级翻译小程序，支持多种语言互译、专业术语翻译和语言风格调整</p>
+                            <div class="project-description-container">
+                                <p>基于大语言模型的母语级翻译小程序，支持多种语言互译、专业术语翻译和语言风格调整。翻译功能实现主要依托于Coze平台搭建的翻译工作流，通过多轮翻译、校对和优化确保翻译质量。</p>
+                                <div class="workflow-link-container">
+                                    <span>您可以查看翻译工作流详解了解详细实现过程</span>
+                                    <a href="translation-workflow.html" class="inline-btn outline-btn"><i class="fas fa-project-diagram"></i> 翻译工作流详解</a>
+                                </div>
+                            </div>
                             <div class="dev-project-highlights">
                                 <div class="highlight-item">
                                     <i class="fas fa-check-circle"></i>
@@ -447,9 +453,11 @@
                                     <span>用户满意度达95%</span>
                                 </div>
                             </div>
-                            <div class="dev-project-links">
-                                <a href="#" class="btn secondary-btn"><i class="fas fa-code"></i> 查看代码</a>
-                                <a href="#" class="btn primary-btn" id="show-qrcode-btn"><i class="fas fa-mobile-alt"></i> 体验小程序</a>
+                            <div class="dev-project-links-container">
+                                <div class="dev-project-links">
+                                    <a href="#" class="btn primary-btn" id="show-qrcode-btn"><i class="fas fa-mobile-alt"></i> 体验小程序</a>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -473,6 +481,8 @@
             <p>使用微信扫描上方二维码，即可体验母语级翻译小程序</p>
         </div>
     </div>
+
+
 
     <footer>
         <div class="footer-content">
@@ -539,7 +549,19 @@
                     // 筛选项目卡片
                     projectCards.forEach(card => {
                         const cardCategory = card.getAttribute('data-category');
-                        if (cardCategory === filterValue) {
+                        const cardTitle = card.querySelector('h3').textContent;
+                        const isBrazilEcommerce = cardTitle.includes('巴西电商经营分析看板');
+
+                        // 如果是数据看板类别，不显示Project Gallery中的巴西电商项目
+                        if (filterValue === 'dashboard' && cardCategory === 'dashboard' && isBrazilEcommerce) {
+                            card.style.display = 'none';
+                        }
+                        // 如果是数据分析类别，显示Project Gallery中的巴西电商项目
+                        else if (filterValue === 'data-analysis' && isBrazilEcommerce) {
+                            card.style.display = 'block';
+                        }
+                        // 其他正常筛选
+                        else if (cardCategory === filterValue) {
                             card.style.display = 'block';
                         } else {
                             card.style.display = 'none';
@@ -610,12 +632,12 @@
                 });
             });
 
-            // 小程序二维码模态框功能
+            // 模态框功能
             const qrcodeModal = document.getElementById('qrcode-modal');
             const showQrcodeBtn = document.getElementById('show-qrcode-btn');
             const closeModal = document.querySelector('.close-modal');
 
-            // 点击体验小程序按钮显示模态框
+            // 点击体验小程序按钮显示二维码模态框
             showQrcodeBtn.addEventListener('click', function(e) {
                 e.preventDefault();
                 qrcodeModal.style.display = 'block';
