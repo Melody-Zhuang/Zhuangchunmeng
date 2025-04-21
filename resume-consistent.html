@@ -19,7 +19,7 @@
             position: relative;
             overflow: hidden;
         }
-
+        
         .page-header::before {
             content: '';
             position: absolute;
@@ -30,23 +30,23 @@
             background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 L0,100 Z" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></svg>');
             opacity: 0.1;
         }
-
+        
         .header-content {
             position: relative;
             z-index: 1;
         }
-
+        
         .page-header h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
             font-weight: 700;
         }
-
+        
         .page-header .subtitle {
             font-size: 1.2rem;
             opacity: 0.9;
         }
-
+        
         .resume-container {
             max-width: 1200px;
             margin: 0 auto 3rem;
@@ -55,19 +55,19 @@
             box-shadow: var(--box-shadow);
             overflow: hidden;
         }
-
+        
         .pdf-container {
             width: 100%;
             height: 800px;
             border: none;
         }
-
+        
         .pdf-container object {
             width: 100%;
             height: 100%;
             display: block;
         }
-
+        
         .resume-actions {
             display: flex;
             justify-content: flex-end;
@@ -75,7 +75,7 @@
             background: var(--background-color);
             border-top: 1px solid rgba(0,0,0,0.05);
         }
-
+        
         .download-btn {
             display: inline-flex;
             align-items: center;
@@ -89,13 +89,13 @@
             transition: var(--transition);
             box-shadow: 0 4px 15px rgba(76, 201, 240, 0.3);
         }
-
+        
         .download-btn:hover {
             background: var(--primary-color);
             transform: translateY(-3px);
             box-shadow: 0 8px 25px rgba(67, 97, 238, 0.4);
         }
-
+        
         .pdf-fallback {
             padding: 3rem;
             text-align: center;
@@ -106,26 +106,26 @@
             justify-content: center;
             align-items: center;
         }
-
+        
         .pdf-fallback p {
             margin-bottom: 1.5rem;
             font-size: 1.2rem;
             color: var(--text-color);
         }
-
+        
         .pdf-fallback .btn {
             margin-top: 1rem;
         }
-
+        
         @media (max-width: 768px) {
             .page-header {
                 padding: 2rem 1rem;
             }
-
+            
             .page-header h1 {
                 font-size: 2rem;
             }
-
+            
             .pdf-container {
                 height: 600px;
             }
@@ -150,6 +150,7 @@
         <section class="page-header">
             <div class="header-content">
                 <h1>个人简历 <span class="highlight">Professional Resume</span></h1>
+                <p class="subtitle">查看我的专业背景、技能和项目经验</p>
             </div>
         </section>
 
@@ -209,10 +210,10 @@
             // 显示下载成功提示
             const downloadBtn = document.querySelector('.download-btn');
             const originalText = downloadBtn.innerHTML;
-
+            
             downloadBtn.innerHTML = '<i class="fas fa-check"></i> 下载成功';
             downloadBtn.style.backgroundColor = 'var(--success-color)';
-
+            
             // 恢复按钮原样式
             setTimeout(() => {
                 downloadBtn.innerHTML = originalText;

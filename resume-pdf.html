@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="庄春萌 - 数据分析爱好者与英语翻译专业背景的个人简历">
+    <title>庄春萌 - 数据分析爱好者/英语翻译专业背景的简历</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/resume-professional.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .pdf-container {
+            width: 100%;
+            height: 800px;
+            margin: 0 auto;
+            border: 1px solid #e0e0e0;
+            border-radius: var(--resume-radius);
+            overflow: hidden;
+            box-shadow: var(--resume-shadow);
+        }
+        
+        .pdf-container object {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        
+        .pdf-fallback {
+            padding: 2rem;
+            text-align: center;
+            background: #f8f9fa;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .pdf-fallback p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: var(--resume-text);
+        }
+        
+        .pdf-fallback a {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: var(--resume-secondary);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--resume-transition);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pdf-fallback a:hover {
+            background: var(--resume-primary);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        @media (max-width: 768px) {
+            .pdf-container {
+                height: 600px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">庄春萌 | Zhuang Chunmeng</div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="projects.html">项目展示</a></li>
+                <li><a href="resume.html" class="active">简历</a></li>
+                <li><a href="skills.html">个人优势</a></li>
+                <li><a href="honors.html">个人荣誉</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="resume-container">
+            <a href="#" class="download-resume-btn" onclick="downloadResume()">
+                <i class="fas fa-download"></i> 下载简历
+            </a>
+            <section class="resume-header">
+                <h1>个人简历 | Professional Resume</h1>
+                <div class="basic-info">
+                    <h2>庄春萌</h2>
+                    <p>数据分析爱好者 / 英语翻译专业背景</p>
+                    <div class="contact-info">
+                        <p><i class="fas fa-birthday-cake"></i> 2001/3/13</p>
+                        <p><i class="fas fa-envelope"></i> zhuangchunmeng12@163.com</p>
+                        <p><i class="fas fa-phone"></i> 138-6353-3037</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 北京市朝阳区</p>
+                    </div>
+                </div>
+            </section>
+            <div class="resume-content">
+                <div class="pdf-container">
+                    <object data="assets/庄春萌简历.pdf" type="application/pdf">
+                        <div class="pdf-fallback">
+                            <p>您的浏览器不支持嵌入PDF查看器。您可以下载简历PDF文件查看。</p>
+                            <a href="assets/庄春萌简历.pdf" target="_blank">
+                                <i class="fas fa-file-pdf"></i> 查看PDF简历
+                            </a>
+                        </div>
+                    </object>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>庄春萌 | Zhuang Chunmeng</h3>
+                <p>数据分析爱好者 / 英语翻译专业背景</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-nav">
+                    <h4>导航</h4>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="projects.html">项目展示</a></li>
+                        <li><a href="resume.html">简历</a></li>
+                        <li><a href="skills.html">个人优势</a></li>
+                        <li><a href="honors.html">个人荣誉</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>联系方式</h4>
+                    <p><i class="fas fa-envelope"></i> zhuangchunmeng12@163.com</p>
+                    <p><i class="fas fa-phone"></i> 138-6353-3037</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 庄春萌个人网站. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

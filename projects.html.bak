@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="庄春萌 - 数据分析师与业务运营专家的项目展示">
+    <meta name="keywords" content="数据分析项目, 业务运营, 数据可视化, Power BI, Python, SQL, 项目案例">
+    <title>项目展示 - 庄春萌</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/dashboards.css">
+    <link rel="stylesheet" href="css/development.css">
+    <link rel="stylesheet" href="css/filter.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/projects-layout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="projects-page">
+    <header>
+        <nav class="navbar">
+            <div class="logo">庄春萌 | Zhuang Chunmeng</div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="projects.html" class="active">项目展示</a></li>
+                <li><a href="resume.html">简历</a></li>
+                <li><a href="skills.html">个人优势</a></li>
+                <li><a href="honors.html">个人荣誉</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="header-content">
+                <h1>我的<span class="highlight">项目案例</span></h1>
+                <p class="subtitle">用数据讲述商业故事，用分析创造业务价值</p>
+            </div>
+        </section>
+
+        <section class="project-filter-section">
+            <div class="container">
+                <div class="filter-container">
+                    <h2>筛选项目 <span class="accent">Filter Projects</span></h2>
+
+                    <div class="filter-categories">
+                        <div class="filter-row">
+                            <div class="filter-category" id="data-analysis-category">
+                                <h3>数据分析项目</h3>
+                                <div class="filter-buttons">
+                                    <button class="filter-btn data-analysis-btn" data-filter="data-analysis" type="button"><i class="fas fa-chart-pie"></i> 数据分析</button>
+                                    <button class="filter-btn dashboard-btn" data-filter="dashboard" type="button"><i class="fas fa-chart-bar"></i> 数据看板</button>
+                                </div>
+                            </div>
+
+                            <div class="filter-category" id="development-category">
+                                <h3>开发项目</h3>
+                                <div class="filter-buttons">
+                                    <button class="filter-btn development-btn" data-filter="development" type="button"><i class="fas fa-code"></i> 开发项目</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-grid-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>项目案例 <span class="accent">Project Gallery</span></h2>
+                </div>
+                <div class="projects-grid">
+                    <!-- 巴西电商项目卡片 -->
+                    <div class="project-card" data-category="dashboard">
+                        <div class="project-card-image">
+                            <img src="images/ecommerce-dashboard.jpg" alt="巴西电商经营分析看板">
+                            <div class="project-category">数据看板</div>
+                        </div>
+                        <div class="project-card-content">
+                            <h3>巴西电商经营分析看板</h3>
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">FineBI</span>
+                                <span class="tech-tag">数据分析</span>
+                                <span class="tech-tag">可视化设计</span>
+                            </div>
+                            <p>基于巴西电商平台真实数据，创建全面的电商经营分析看板，帮助管理层洞察销售趋势、顾客行为和市场机会</p>
+                            <div class="project-highlights">
+                                <div class="highlight-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>多维度数据分析</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>交互式看板设计</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>销售与客户深度洞察</span>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://s.shutu.cn/w/1r7kqy" target="_blank" rel="noopener noreferrer" class="btn secondary-btn"><i class="fas fa-sitemap"></i> 思维导图</a>
+                                <a href="https://pcdemo.finebi.com/webroot/decision/link/HG00" target="_blank" rel="noopener noreferrer" class="btn primary-btn"><i class="fas fa-chart-bar"></i> 查看看板</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- 巧克力销售分析项目 -->
+                    <div class="project-card" data-category="data-analysis">
+                        <div class="project-card-image">
+                            <img src="images/chocolate-sales.jpg" alt="巧克力销售数据分析">
+                            <div class="project-category">数据分析</div>
+                        </div>
+                        <div class="project-card-content">
+                            <h3>巧克力销售数据分析</h3>
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Pandas</span>
+                                <span class="tech-tag">Matplotlib</span>
+                            </div>
+                            <p>分析全球巧克力销售数据，挖掘销售趋势、季节性模式、地区差异和产品偏好，为巧克力制造商提供数据驱动的营销和产品策略</p>
+                            <div class="project-highlights">
+                                <div class="highlight-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>销售季节性分析与节日效应评估</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>产品组合优化与价格敏感度分析</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>消费者偏好洞察与市场细分</span>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.kaggle.com/code/melodyzhuang/chocolatesales-analysis-da" target="_blank" rel="noopener noreferrer" class="btn primary-btn"><i class="fas fa-code"></i> 查看Kaggle项目</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- 酒店预订项目卡片 -->
+                    <div class="project-card" data-category="data-analysis">
+                        <div class="project-card-image">
+                            <img src="images/hotel-booking.jpg" alt="酒店预订取消分析">
+                            <div class="project-category">数据分析</div>
+                        </div>
+                        <div class="project-card-content">
+                            <h3>酒店预订取消分析与预测</h3>
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Pandas</span>
+                                <span class="tech-tag">Matplotlib</span>
+                            </div>
+                            <p>分析酒店预订数据，找出影响客户取消预订的关键因素，并建立数据模型，帮助酒店运营团队优化收益管理策略</p>
+                            <div class="project-highlights">
+                                <div class="highlight-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>数据分析准确率达85%</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>找出5个关键影响因素</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>潜在收益提升20%</span>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.kaggle.com/code/melodyzhuang/hotel-cancellation-analysis/notebook" target="_blank" rel="noopener noreferrer" class="btn primary-btn"><i class="fas fa-code"></i> 查看Kaggle项目</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <section class="project-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>想了解更多项目细节？</h2>
+                    <p>如果您对我的项目经历和解决方案感兴趣，欢迎与我联系，我可以提供更详细的项目文档和技术说明。</p>
+                    <a href="mailto:Zhuangchunmeng12@163.com" class="btn primary-btn"><i class="fas fa-envelope"></i> 联系我</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 看板展示部分 -->
+        <section class="dashboards-section" id="dashboards">
+            <div class="container">
+                <div class="section-title">
+                    <h2>数据看板展示 <span class="accent">Data Dashboards</span></h2>
+                </div>
+                <div class="section-intro">
+                    <p>我制作了超过10个专业数据看板，涵盖销售分析、运营监控、客户洞察等多个领域。以下是部分代表作品，展示我在数据可视化和业务分析方面的能力。</p>
+                </div>
+
+                <div class="dashboards-grid">
+                    <!-- 保健品监控看板 -->
+                    <div class="dashboard-card" data-category="dashboard">
+                        <div class="dashboard-preview">
+                            <img src="images/data-analytics.jpg" alt="保健品监控看板">
+                            <div class="dashboard-overlay">
+                                <a href="https://pcdemo.finebi.com/webroot/decision/link/xLxr" target="_blank" rel="noopener noreferrer" class="view-dashboard-btn"><i class="fas fa-chart-bar"></i> 查看看板</a>
+                            </div>
+                        </div>
+                        <div class="dashboard-info">
+                            <h3>保健品监控看板</h3>
+                            <div class="dashboard-tools">
+                                <span class="tool-tag">FineBI</span>
+                                <span class="tool-tag">财务分析</span>
+                                <span class="tool-tag">多维度分析</span>
+                            </div>
+                            <p>全面分析保健品公司财务和运营数据，跟踪利润趋势、成本结构、库存周转和商品ROI，提供经营改善和产品策略建议</p>
+                            <div class="dashboard-highlights">
+                                <div class="highlight-item">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <span>2019年利润暴跌，ROI为负，库存周转天数过高</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-balance-scale"></i>
+                                    <span>销售费用占比过高，研发投入不足</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <span>A商品ROI最高，建议提升产品品质而非过度推广</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 电商监控看板 -->
+                    <div class="dashboard-card" data-category="dashboard">
+                        <div class="dashboard-preview">
+                            <img src="images/ecommerce-dashboard.jpg" alt="电商监控看板">
+                            <div class="dashboard-overlay">
+                                <a href="https://pcdemo.finebi.com/webroot/decision/link/Tg9i" target="_blank" rel="noopener noreferrer" class="view-dashboard-btn"><i class="fas fa-chart-bar"></i> 查看看板</a>
+                            </div>
+                        </div>
+                        <div class="dashboard-info">
+                            <h3>电商监控看板</h3>
+                            <div class="dashboard-tools">
+                                <span class="tool-tag">FineBI</span>
+                                <span class="tool-tag">营销分析</span>
+                            </div>
+                            <p>全面监控电商店铺运营数据，包括商品动销率、访客转化、活动效果对比及收益占比分析</p>
+                            <div class="dashboard-highlights">
+                                <div class="highlight-item">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span>商品动销率与在线商品数关联分析</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-funnel-dollar"></i>
+                                    <span>访客-加购-支付转化漏斗分析</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-chart-pie"></i>
+                                    <span>不同类型活动收益占比及效果对比</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 供应链监控仪表盘 -->
+                    <div class="dashboard-card" data-category="dashboard">
+                        <div class="dashboard-preview">
+                            <img src="images/data-analytics.jpg" alt="供应链监控仪表盘">
+                            <div class="dashboard-overlay">
+                                <a href="https://pcdemo.finebi.com/webroot/decision/link/g7eZ" target="_blank" rel="noopener noreferrer" class="view-dashboard-btn"><i class="fas fa-chart-bar"></i> 查看看板</a>
+                            </div>
+                        </div>
+                        <div class="dashboard-info">
+                            <h3>供应链监控仪表盘</h3>
+                            <div class="dashboard-tools">
+                                <span class="tool-tag">FineBI</span>
+                                <span class="tool-tag">库存分析</span>
+                                <span class="tool-tag">物流管理</span>
+                            </div>
+                            <p>全面监控供应链各环节运营效率，包括库存管理、供应商绩效、物流配送、需求预测以及成本分析等多维度指标</p>
+                            <div class="dashboard-highlights">
+                                <div class="highlight-item">
+                                    <i class="fas fa-boxes"></i>
+                                    <span>库存周转率与最优库存水平分析</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-truck"></i>
+                                    <span>物流配送效率与成本优化分析</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-handshake"></i>
+                                    <span>供应商交付准时率与质量合格率跟踪</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="dashboards-grid second-row">
+                    <!-- 巴西电商业务分析看板 -->
+                    <div class="dashboard-card" data-category="dashboard">
+                        <div class="dashboard-preview">
+                            <img src="images/ecommerce-dashboard.jpg" alt="巴西电商业务分析看板">
+                            <div class="dashboard-overlay">
+                                <a href="https://pcdemo.finebi.com/webroot/decision/link/HG00" target="_blank" rel="noopener noreferrer" class="view-dashboard-btn"><i class="fas fa-chart-bar"></i> 查看看板</a>
+                            </div>
+                        </div>
+                        <div class="dashboard-info">
+                            <h3>巴西电商业务分析看板</h3>
+                            <div class="dashboard-tools">
+                                <span class="tool-tag">FineBI</span>
+                                <span class="tool-tag">多维度分析</span>
+                            </div>
+                            <p>基于巴西电商平台真实数据，创建全面的电商经营分析看板，帮助管理层洞察销售趋势、顾客行为和市场机会</p>
+                            <div class="dashboard-highlights">
+                                <div class="highlight-item">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>多维度数据分析与可视化</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>客户行为与地理分布分析</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-percentage"></i>
+                                    <span>销售趋势与季节性波动分析</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 零售行业财务分析看板 -->
+                    <div class="dashboard-card" data-category="dashboard">
+                        <div class="dashboard-preview">
+                            <img src="images/retail-finance.jpg" alt="零售行业财务分析看板">
+                            <div class="dashboard-overlay">
+                                <a href="https://pcdemo.finebi.com/webroot/decision/link/Es06" target="_blank" rel="noopener noreferrer" class="view-dashboard-btn"><i class="fas fa-chart-bar"></i> 查看看板</a>
+                            </div>
+                        </div>
+                        <div class="dashboard-info">
+                            <h3>零售行业财务分析看板</h3>
+                            <div class="dashboard-tools">
+                                <span class="tool-tag">FineBI</span>
+                                <span class="tool-tag">趋势分析</span>
+                            </div>
+                            <p>全面分析零售超市2010-2018年的经营数据，包括净利润、收入结构、成本结构及会员费贡献</p>
+                            <div class="dashboard-highlights">
+                                <div class="highlight-item">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>净利润从26亿增长到62.6亿，净利率提升至2.2%</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>会员费与净利润增长趋势一致，贡献显著</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-percentage"></i>
+                                    <span>商品毛利率维持10%以上，运营费用率下降至4.9%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 咖啡店KPI监控看板 -->
+                    <div class="dashboard-card" data-category="dashboard">
+                        <div class="dashboard-preview">
+                            <img src="images/coffee-dashboard.jpg" alt="咖啡店KPI监控看板">
+                            <div class="dashboard-overlay">
+                                <a href="https://pcdemo.finebi.com/webroot/decision/link/IfRM" target="_blank" rel="noopener noreferrer" class="view-dashboard-btn"><i class="fas fa-chart-bar"></i> 查看看板</a>
+                            </div>
+                        </div>
+                        <div class="dashboard-info">
+                            <h3>咖啡店KPI监控看板</h3>
+                            <div class="dashboard-tools">
+                                <span class="tool-tag">FineBI</span>
+                                <span class="tool-tag">销售分析</span>
+                                <span class="tool-tag">地区分析</span>
+                            </div>
+                            <p>全面展示咖啡店的销售收入、毛利率、ROI变化、产品销售情况、城市销量分布以及性别消费差异等关键绩效指标</p>
+                            <div class="dashboard-highlights">
+                                <div class="highlight-item">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>销售收入持续增长，从1月的2,933元增长到6月的20,034元</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-coffee"></i>
+                                    <span>卡布奇诺、拿铁和摩卡是销量最高的产品，占比超过70%</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-venus-mars"></i>
+                                    <span>女性消费金额高，男性消费数量多，可制定差异化营销策略</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </section>
+
+        <!-- 开发项目部分 -->
+        <section class="development-section" id="development">
+            <div class="container">
+                <div class="section-title">
+                    <h2>开发项目展示 <span class="accent">Development Projects</span></h2>
+                </div>
+                <div class="section-intro">
+                    <p>以下是我与AI协作完成的开发项目。通过与AI的合作，我能够快速实现创意、提高开发效率并保证代码质量。该项目展示了我在软件开发、用户界面设计和问题解决方面的能力。</p>
+                </div>
+
+                <div class="dev-projects-grid">
+                    <!-- 母语级翻译小程序 -->
+                    <div class="dev-project-card" data-category="development">
+                        <div class="dev-project-image">
+                            <img src="images/trans.png" alt="母语级翻译小程序">
+                            <div class="dev-project-badge">AI协作</div>
+                        </div>
+                        <div class="dev-project-content">
+                            <h3>母语级翻译小程序</h3>
+                            <div class="dev-project-tech">
+                                <span class="tech-tag">WeChat Mini Program</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">AI API</span>
+                            </div>
+                            <div class="project-description-container">
+                                <p>基于大语言模型的母语级翻译小程序，支持多种语言互译、专业术语翻译和语言风格调整。翻译功能实现主要依托于Coze平台搭建的翻译工作流，通过多轮翻译、校对和优化确保翻译质量。</p>
+                                <div class="workflow-link-container">
+                                    <span>您可以查看翻译工作流详解了解详细实现过程</span>
+                                    <a href="translation-workflow.html" class="inline-btn outline-btn"><i class="fas fa-project-diagram"></i> 翻译工作流详解</a>
+                                </div>
+                            </div>
+                            <div class="dev-project-highlights">
+                                <div class="highlight-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>支持50+种语言互译</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>专业领域翻译功能</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>用户满意度达95%</span>
+                                </div>
+                            </div>
+                            <div class="dev-project-links-container">
+                                <div class="dev-project-links">
+                                    <a href="#" class="btn primary-btn" id="show-qrcode-btn"><i class="fas fa-mobile-alt"></i> 体验小程序</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </section>
+    </main>
+
+    <!-- 小程序二维码模态框 -->
+    <div id="qrcode-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>扫码体验母语级翻译小程序</h3>
+            <div class="qrcode-container">
+                <img src="images/icon.png" alt="小程序二维码">
+            </div>
+            <p>使用微信扫描上方二维码，即可体验母语级翻译小程序</p>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>庄春萌 | Zhuang Chunmeng</h3>
+                <p>数据分析爱好者 / 英语翻译专业背景</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-nav">
+                    <h4>导航</h4>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="projects.html">项目展示</a></li>
+                        <li><a href="resume.html">简历</a></li>
+                        <li><a href="skills.html">个人优势</a></li>
+                        <li><a href="honors.html">个人荣誉</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>联系方式</h4>
+                    <p><i class="fas fa-envelope"></i> Zhuangchunmeng12@163.com</p>
+                    <p><i class="fas fa-phone"></i> 138-6353-3037</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 庄春萌个人网站. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // 项目筛选功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+            const devProjectCards = document.querySelectorAll('.dev-project-card');
+            const dashboardsSection = document.getElementById('dashboards');
+            const developmentSection = document.getElementById('development');
+
+            // 默认显示所有项目，但不选中任何按钮
+            // 初始化时显示所有项目卡片
+            projectCards.forEach(card => {
+                card.style.display = 'block';
+            });
+
+            devProjectCards.forEach(card => {
+                card.style.display = 'block';
+            });
+
+            // 确保开发项目和看板部分都显示
+            developmentSection.style.display = 'block';
+            dashboardsSection.style.display = 'block';
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // 更新活跃按钮
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    // 获取筛选类别
+                    const filterValue = button.getAttribute('data-filter');
+
+                    // 筛选项目卡片
+                    projectCards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+                        const cardTitle = card.querySelector('h3').textContent;
+                        const isBrazilEcommerce = cardTitle.includes('巴西电商经营分析看板');
+
+                        // 如果是数据看板类别，不显示Project Gallery中的巴西电商项目
+                        if (filterValue === 'dashboard' && cardCategory === 'dashboard' && isBrazilEcommerce) {
+                            card.style.display = 'none';
+                        }
+                        // 如果是数据分析类别，显示Project Gallery中的巴西电商项目
+                        else if (filterValue === 'data-analysis' && isBrazilEcommerce) {
+                            card.style.display = 'block';
+                        }
+                        // 其他正常筛选
+                        else if (cardCategory === filterValue) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+
+                    // 筛选开发项目卡片
+                    devProjectCards.forEach(card => {
+                        if (card.getAttribute('data-category') === filterValue) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+
+                    // 筛选看板部分
+                    if (filterValue === 'dashboard') {
+                        dashboardsSection.style.display = 'block';
+                        developmentSection.style.display = 'none';
+                        // 如果选择了看板类别，滚动到看板部分
+                        setTimeout(() => {
+                            dashboardsSection.scrollIntoView({ behavior: 'smooth' });
+                        }, 100);
+                    }
+                    // 筛选开发项目部分
+                    else if (filterValue === 'development') {
+                        dashboardsSection.style.display = 'none';
+                        developmentSection.style.display = 'block';
+                        // 如果选择了开发项目类别，滚动到开发项目部分
+                        setTimeout(() => {
+                            developmentSection.scrollIntoView({ behavior: 'smooth' });
+                        }, 100);
+                    } else {
+                        // 其他数据分析类别，显示数据分析项目，隐藏开发项目和看板部分
+                        dashboardsSection.style.display = 'none';
+                        developmentSection.style.display = 'none';
+                    }
+                });
+            });
+
+            // 项目详情按钮点击事件
+            const viewProjectButtons = document.querySelectorAll('.view-project-btn');
+            viewProjectButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const projectCard = this.closest('.project-card');
+                    const projectId = projectCard.id;
+
+                    // 在实际项目中，这里可以导航到详细的项目页面或打开模态框
+                    alert('这里将显示项目详情: ' + (projectId || '项目'));
+                });
+            });
+
+            // 看板查看按钮点击事件
+            const viewDashboardButtons = document.querySelectorAll('.view-dashboard-btn');
+            viewDashboardButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    // 只对没有实际链接的按钮进行处理
+                    if (this.getAttribute('href') === '#') {
+                        e.preventDefault();
+                        const dashboardCard = this.closest('.dashboard-card');
+                        const dashboardTitle = dashboardCard.querySelector('h3').textContent;
+
+                        // 在实际项目中，这里可以打开看板预览或跳转到看板链接
+                        alert('这里将显示看板: ' + dashboardTitle);
+                    }
+                    // 对于有实际链接的按钮，不阻止默认行为，允许正常跳转
+                });
+            });
+
+            // 模态框功能
+            const qrcodeModal = document.getElementById('qrcode-modal');
+            const showQrcodeBtn = document.getElementById('show-qrcode-btn');
+            const closeModal = document.querySelector('.close-modal');
+
+            // 点击体验小程序按钮显示二维码模态框
+            showQrcodeBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                qrcodeModal.style.display = 'block';
+                document.body.style.overflow = 'hidden'; // 防止背景滚动
+            });
+
+            // 点击关闭按钮隐藏模态框
+            closeModal.addEventListener('click', function() {
+                qrcodeModal.style.display = 'none';
+                document.body.style.overflow = 'auto'; // 恢复背景滚动
+            });
+
+            // 点击模态框外部隐藏模态框
+            window.addEventListener('click', function(e) {
+                if (e.target === qrcodeModal) {
+                    qrcodeModal.style.display = 'none';
+                    document.body.style.overflow = 'auto'; // 恢复背景滚动
+                }
+            });
+        });
+    </script>
+</body>
+</html>
