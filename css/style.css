@@ -474,7 +474,7 @@ main {
 
 .skills-highlights {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -1268,6 +1268,8 @@ footer p {
     box-shadow: var(--box-shadow);
     overflow: hidden;
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
@@ -1294,6 +1296,9 @@ footer p {
 
 .project-card-content {
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .project-card-content h3 {
@@ -1309,6 +1314,13 @@ footer p {
 }
 
 .project-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.dashboard-highlights {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
@@ -1356,6 +1368,12 @@ footer p {
 }
 
 /* 响应式调整 */
+@media (max-width: 1200px) {
+    .skills-highlights {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     /* 导航栏响应式 */
     .navbar {
@@ -1505,6 +1523,11 @@ footer p {
 
 /* 超小屏幕响应式调整 */
 @media (max-width: 480px) {
+    .skills-highlights {
+        grid-template-columns: 1fr;
+    }
+
+
     .hero h1 {
         font-size: 2rem;
     }
@@ -1577,11 +1600,14 @@ footer p {
 .project-links {
     display: flex;
     gap: 0.8rem;
-    margin-top: 1.5rem;
+    margin-top: auto;
+    padding-top: 1.5rem;
+    justify-content: center;
 }
 
 .project-links .btn {
-    flex: 1;
+    width: 100%;
+    max-width: 200px;
     padding: 0.7rem 0.5rem;
     font-size: 0.9rem;
     text-align: center;
@@ -1603,4 +1629,76 @@ footer p {
 .dashboards-grid.second-row,
 .dashboards-grid.third-row {
     margin-top: 2rem;
+}
+
+/* 看板预览样式 */
+.dashboard-preview {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
+
+.dashboard-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.dashboard-card:hover .dashboard-preview img {
+    transform: scale(1.1);
+}
+
+.dashboard-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.dashboard-preview:hover .dashboard-overlay {
+    opacity: 1;
+}
+
+.dashboard-info {
+    padding: 1.5rem;
+}
+
+.dashboard-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.view-dashboard-btn {
+    background: var(--accent-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.view-dashboard-btn:hover {
+    background: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.view-project-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
 }
